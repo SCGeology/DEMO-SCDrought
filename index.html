@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SC Drought</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="" />
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span id="big-brand" class="d-none d-sm-inline">South Carolina Drought</span> 
+                <span id="small-brand" class="d-sm-none">SC Drought</span>
+                <img src="logos/drought_logo.png" id="head-logo"/>
+            </a>
+            <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="current.html">Conditions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resources.html">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="impacts.html">Impacts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="committee.html">Committee</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="planning.html">Planning</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Heading Row -->
+        <div class="row my-4">
+            <div class="col-lg-7">
+                <div id="map"></div>
+                <div id="thumb"></div>
+            </div>
+            <!-- /.col-lg-8 -->
+            <div class="col-lg-5">
+                <h2><a href="./current.html">Current Status</a></h2>
+                <div id="con-table">
+                    <div class="con-row">
+                        <div class="con-head" id="Normal-h">Normal<span class="graph"></span></div>
+                        <div class="con-value"><span id="Normal"></span></div>
+                    </div>
+                    <div class="con-row">
+                        <div class="con-head" id="Incipient-h">Incipient<span class="graph"></span></div>
+                        <div class="con-value"><span id="Incipient"></span></div>
+                    </div>
+                    <div class="con-row">
+                        <div class="con-head" id="Moderate-h">Moderate<span class="graph"></span></div>
+                        <div class="con-value"><span id="Moderate"></span></div>
+                    </div>
+                    <div class="con-row">
+                        <div class="con-head" id="Severe-h">Severe<span class="graph"></span></div>
+                        <div class="con-value"><span id="Severe"></span></div>
+                    </div>
+                    <div class="con-row">
+                        <div class="con-head" id="Extreme-h">Extreme<span class="graph"></span></div>
+                        <div class="con-value"><span id="Extreme"></span></div>
+                    </div>
+                </div>
+                <p id="legend">Number of Counties in Each Category</p>
+                <p class="mt-4"><a href="./current.html" style="font-weight: bold;">Drought Conditions >>></a> Find out more about current drought conditions, how drought status is determined in South Carolina, and view archived drought condition reports.</p>
+            </div>
+        </div>
+    </div>
+
+     <!-- Call to Action Well -->
+      <div class="card text-white bg-secondary my-4 px-md-5">
+        <div class="card-body">
+          <h3>South Carolina Drought Response Committee Conference Call</h3>
+            <h4>Wednesday, April 25, 2018 at 10:00 AM.</h4>
+            <p>The South Carolina Department of Natural Resources will conduct this meeting to evaluate the drought status statewide.</p>
+            <button class="btn btn-sm" id="action-btn">Find out more.<i class="fas fa-caret-down ml-3"></i></button>
+          <p class="text-white mt-2" id="action-more">Contact South Carolina's State Climatologist, Dr. Hope Mizzell, at (803) 734-9568 or e-mail at mizzellh@dnr.sc.gov for more information.<br>
+            Please choose the access number local to you:<br>
+            803-726-9796<br>
+            864-908-3279<br>
+            843-737-7035<br>
+            Participant Access Code: <b>922820#</b>
+        </p>
+        </div>
+      </div>
+    
+    <div class="container">
+        <!-- Content Row -->
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title"><a href="resources.html">Drought Resources</a></h2>
+                        <p class="card-text">Learn about drought, drought types, ways to measure drought in a climatological context and how South Carolina monitors and assesses drought. </p>
+                        <figure class="figure">
+                            <img class="card-img" src="images/fire.jpg" alt="helicopters scooping water from reservoir with fire in the background" />
+                            <figcaption class="figure-caption">Pinnacle Mountain Fire in fall of 2016 resulted in a loss of 10,623 acres. Image Credit: U.S. Army National Guard Staff Sgt. Roberto Di Giovine via Flickr CC BY 2.0</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title"><a href="impacts.html">Drought Impacts</a></h2>
+                        <p class="card-text">Drought impacts spread to all water-sensitive sectors. Learn more about how droughts can affect communities and ecosystems and what can be done to reduce these impacts. </p>
+                        <figure class="figure">    
+                            <img class="card-img" src="images/lake.jpg" alt="low lake levels and exposed shoreline"/>
+                            <figcaption class="figure-caption">Low lake levels impact energy production, recreation, and wildlife. Image Credit: Mike Burton via Flickr CC BY-ND 2.0</figcaption>
+                        </figure>    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+        <!-- Content Row -->
+        <div class="row">
+            <div class="col-md-6 mb-2">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title"><a href="committee.html">Drought Reponse Committee</a></h2>
+                        <p class="card-text">The SC Drought Response Committee issues drought status updates and may recommend water use curtailment when conditions escalate to severe or extreme drought.</p>
+                        <figure class="figure">
+                            <img class="card-img" src="images/clay.jpg" alt="cracked clay in dry pond bed."/>
+                            <figcaption class="figure-caption">The SC Drought Response Committee’s role is to ensure safety and well-being of South Carolinians during drought conditions. Image Credit: Janet Tarbox via Flickr CC BY-NC 2.0</figcaption>
+                        </figure>    
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-2">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title"><a href="planning.html">Legislation and Plans</a></h2>
+                        <p class="card-text">South Carolina's drought response encompasses multiple documents, legislation, and plans. Learn more about the State's drought response program and procedures to manage drought.</p>
+                        <figure class="figure">
+                            <img class="card-img" src="images/DroughtTabletop1_crop.jpg" alt="table top exercise image" />
+                            <figcaption class="figure-caption">South Carolina Drought and Water Shortage Tabletop Exercise at the South Carolina Emergency Center on September 27, 2017, in West Columbia, SC. Image Credit: CISA.</figcaption>
+                        </figure>    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 order-lg-2 text-center">
+                    <a href="http://dnr.sc.gov/climate/sco"><img src="logos/dnr_white_text.png" alt="scdnr logo" class="img-fluid mb-3" id="dnr-logo"/></a>
+                    <p>SCDNR State Climate Office<br>
+                    Land, Water, and Conservation Division<br>
+                        State Climate Office<br>
+                        P.O. Box 167<br>
+                        Columbia, SC 29202<br>
+                        <a href="http://dnr.sc.gov/climate/sco">dnr.sc.gov/climate/sco</a>
+                    </p>
+                </div>
+                <div class="col-lg-4 mt-4 mt-md-0 text-center text-md-right order-lg-3">
+                    <a href="http://dnr.sc.gov/climate/sco"><img src="logos/CISAlogoTEXT.png" alt="cisa logo" id="cisa-logo"/></a>
+                    <p class="isa-text pt-1">
+                    University of South Carolina<br>
+                    Deptartment of Geography<br>
+                    Columbia, South Carolina<br>
+                    803.777.2482 or 803.777.6875<br>
+                    cisa@sc.edu<br>
+                    <a href="http://www.cisa.sc.edu/" target="_blank">cisa.sc.edu</a>    
+                    </p>
+                    <p class="isa-text pl-lg-5 text-lg-right">CISA is one of NOAA's Regional Integrated Sciences and Assessments teams.</p>
+                    <a href="https://cpo.noaa.gov/Meet-the-Divisions/Climate-and-Societal-Interactions/RISA"><img src="logos/RISA_logo_highres_crop.png" alt="risa logo" id="risa-logo"/></a>
+                    
+                </div>
+                <div class="col-lg-4 order-lg-1 mt-3 mt-lg-0 foot-nav">
+                    <p class="m-1">SCDrought.com is brought to you by:<br>
+                        <a href="http://dnr.sc.gov/climate/sco">SCDNR State Climate Office</a><br>
+                        <a href="http://www.cisa.sc.edu/">Carolinas Integrated Sciences and Assessments - A NOAA RISA Team</a><br>                  
+                    </p>
+                    <p class="mt-3">Site Navigation:<br>
+                        <a href="index.html">Home</a><br>
+                        <a href="committee.html">SC Drought Response Committee</a><br>
+                        <a href="current.html">Current Drought Conditions</a><br>
+                        <a href="impacts.html">Drought Impacts</a><br>
+                        <a href="planning.html">Drought Planning</a><br>
+                        <a href="resources.html">Drought Resources</a><br>
+                    </p>
+                    <p class="mt-3">Copyright &copy; 2018</p>
+                </div>
+            </div>
+            
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin=""></script>
+    <script src="https://unpkg.com/esri-leaflet@2.0.4/dist/esri-leaflet.js"></script>
+
+    <script src="js/droughtmap.js"></script>
+    
+    <script>
+    $( document ).ready(function() {
+        $( "#action-btn" ).click(function() {
+            $( "#action-more" ).slideToggle( "slow", function() {
+            // Animation complete.
+            });
+        });
+    });
+        
+    </script>
+
+
+</body>
+
+</html>

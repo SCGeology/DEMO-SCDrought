@@ -1,0 +1,292 @@
+body {
+  padding-top: 54px;
+    color:#2b2b2b
+}
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+@media (max-width: 330px) {
+  #head-logo {
+    display: none;
+  }
+}
+
+#map {height:400px;}
+#con-table{
+    width: 100%;
+    display: table;
+    border-spacing: 4px;
+    margin-left: -0.3rem;
+}
+.con-row {
+    display: table-row;
+}
+.btn-custom {
+    background-color:#0c59b7;
+    color:#fff;
+}
+.btn-custom:hover {
+    color:#e6ebf2;
+}
+
+.navbar {
+    background-color:#264656;
+}
+
+.mid-bar{
+    background-color: #e0e5de;
+    padding:1em;
+    margin-bottom:1em;
+}
+
+.dnrlogo{
+    width:60px;
+    height: auto;
+}
+
+.graph {
+    float:right;
+    font-weight: normal;
+    
+}
+
+.con-head {
+    min-width:260px;
+    display:table-cell;
+    font-weight: bold;
+    padding: 0.3em 0 0.3em 0.3em;
+}
+.con-value{
+    border-top:2px solid #ddd;
+    border-right:2px solid #ddd;
+    border-bottom:2px solid #ddd;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    padding:0.3em 0.2em;
+    max-width:100px;
+    font-weight: bold;
+}
+
+#Normal-h, #Normal-t {background-color:#ebf4c3;}
+#Incipient-h, #Incipient-t{background-color: #fecc5c;}
+#Moderate-h, #Moderate-t{background-color:#fd8d3c;}
+#Severe-h, #Severe-t{background-color:#f03b20;}
+#Extreme-h, #Extreme-t{background-color:#bd0026;}
+
+#thumb{
+    position: absolute;
+    bottom:0;
+    left:0;
+    height:400px;
+    width:50px;
+    background-color:rgba(250,255,255,0.3);
+    z-index: 1000;
+}
+
+/*archived*/
+.archive-container form {
+    width: 100%; /* Width of the outside container */
+    padding:8px;
+    display:inline-flex;
+}
+#archive-group {
+    margin: 0 1em;
+    width:50%;
+}
+#legend{
+    font-size:0.8em;
+    padding-right:15px;
+    margin-top: -5px;
+    margin-bottom: 3px;
+    width:100%;
+    text-align: right;
+}
+
+/* committee tables*/
+.tables p{
+    margin-left:10px;
+}
+.divTable{
+	display: table;
+	width: 100%;
+    margin-bottom:1.5em;
+}
+.divTable .row {
+    border-bottom: 1px solid #ccc;
+    padding: 5px;
+}
+
+.header {
+	font-weight: bold;
+    /*border-bottom: 1px solid #555;*/
+}
+
+.contact-info{
+    display:none;
+}
+.fa-plus-square, .fa-minus-square {
+    color:#0b3454;
+    cursor: pointer;
+}
+#reportdl {
+    padding:0.2em;
+}
+
+.question, .area{    
+    padding-top: 60px;
+    margin-top: -40px;
+    margin-bottom: 20px;
+}
+.question h4{
+    background-color:#fecc5c;
+    border-radius: 3px;
+    padding:0.2rem;
+}
+.area h5 {
+    background-color:#ccc;
+    padding:0.2rem;
+    border-radius: 3px;
+}
+
+#faq h5 {
+    background-color:#f7ebbe;
+    padding:0.1rem;
+    border-radius:3px;
+    margin-top:0.7rem;
+    margin-left:0.2rem;
+}
+#faq p {
+    padding-left:0.5rem;
+}
+#faq-toc {
+    line-height: 1.8rem;
+}
+.q-img{
+    width:50%;
+}
+#drought-table th, #drought-table td {
+    border:1px solid gray;
+    width:150px;
+    padding:0.2rem 1rem;
+}
+
+@media (max-width: 450px) {
+  #map, #thumb {
+    height: 250px;
+  }
+}
+@media (max-width:350px){
+    .graph {
+        display:none;
+    }
+    #qualifier {display: none;}
+}
+
+#backup {
+    text-align: center;
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    height:50px;
+    width:40px;
+    border-radius:2px;
+    background-color:#aaa;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(20,20,20,0.5);
+    display: none;
+    opacity: 0.7;
+    color:#222;
+}
+#backup:hover {box-shadow:0 0 0 0;}
+
+#action-more{
+    display:none;
+}
+
+#table-link-btn {
+    position: absolute;
+    bottom:20px;
+    left:20px;
+    z-index: 1020;
+}
+
+#dnr-logo{
+    width:125px;
+    height: auto;
+}
+#cisa-logo{
+    width:250px;
+    height: auto
+}
+#risa-logo{
+    width:250px;
+    height: auto;
+}
+footer{
+    color:white;
+}
+footer a{
+    color:white;
+    text-decoration: underline;
+}
+footer a:hover{
+    color:gray;
+}
+.foot-nav a{
+    font-size: 0.8em;
+}
+#head-logo{
+    height:40px;
+    width: auto;
+    margin-left: 10px;
+}
+
+#graph-div{
+    min-width:320px;
+}
+#pdsi-img{
+    width:210px;
+}
+#sc-pdsi{
+    width:100%;
+}
+#date-stack{
+    width:80px;
+}
+.timeline-date{
+    position: absolute;
+}
+.timeline-text p {
+    margin-top: -40px;
+    padding-top: 55px;
+}
+#pdsi-legend{
+    width:280px;
+}
+.isa-text{
+    font-size:0.8em;
+}
+.big-pic{
+    max-width: 800px;
+}
+#faq figure{
+    margin-left:0.4em;
+}
+.navbar a{
+    color:white;
+}
+.navbar{
+    font-size:1.2em;
+}
+.navbar a:hover{
+    text-decoration: underline;
+}
+.navbar-brand{
+    font-size:1.4em;
+}
+.active {
+    background-color: #6c757d;
+}
