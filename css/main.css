@@ -8,12 +8,6 @@ body {
   }
 }
 
-@media (max-width: 330px) {
-  #head-logo {
-    display: none;
-  }
-}
-
 #map {height:400px;}
 #con-table{
     width: 100%;
