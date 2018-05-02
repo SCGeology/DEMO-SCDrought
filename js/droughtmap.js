@@ -10,8 +10,7 @@ var map = L.map('map', {
     zoomDelta: 0.5,
     doubleClickZoom:'center',
     wheelPxPerZoomLevel:100,
-    maxBounds:[[37, -85],[30.5,-77]],
-    preferCanvas:true
+    maxBounds:[[37, -85],[30.5,-77]]
 }).fitBounds([[35.3, -83.4],[31.9,-78.44]]);
 
 var Esri_NatGeoWorldMap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
@@ -59,12 +58,10 @@ function getCount(c, f) {
         for (var i = 0; i < count; i++) {
             $("#" + decode(c) + "-h > .graph").append("|");
         }
-        $("#loader").toggleClass("d-none d-block");
     });
 }
 
 function getStats(f) {
-    $("#loader").toggleClass("d-none d-block");
     for (var i = 0; i < 5; i++) {
         getCount(i.toString(), f);
     }
@@ -129,67 +126,57 @@ function getLatest() {
 //call to get data updated
 getLatest();
 
+$("#archive-select").change(function(){
+    if (this.value == "current"){
+        setLayer(latest);
+        getStats(latest);
+        makeTable(latest);
+        $("#qualifier").text("Current");
+        $("#date").text(prettydate(latest));
+        $("#table-date").text(prettydate(latest));
+        $("#forward").prop("disabled", true);
+    } else {
+        setLayer(this.value);
+        getStats(this.value);
+        makeTable(this.value);
+        $("#qualifier").text("Archived");
+        $("#date").text(prettydate(this.value));
+        $("#table-date").text(prettydate(this.value));
+        $("#forward").prop("disabled", false)
+    }
+    if (this.value == oldest){
+        $("#backward").prop("disabled", true);
+    } else {
+        $("#backward").prop("disabled", false)
+    }
+});
+
+$("#forward").click(function(){
+    $("#archive-select > option:selected")
+        .prop("selected", false)
+        .prev()
+        .prop("selected", true)
+        .trigger("change");
+});
+
+$("#backward").click(function(){
+    $("#archive-select > option:selected")
+        .prop("selected", false)
+        .next()
+        .prop("selected", true)
+        .trigger("change");
+});
+
 var pdfParse = function(){
-    var d = $("#date").text();
-    return [d.substring(0,2), d.substring(3,5), d.substring(8)].join("");
+    var d = $("#date").text()
+    return [d.substring(0,2), d.substring(3,5), d.substring(8)].join("")
 }
 
+$("#reportdl").on('click', function(){
+    window.open("pdf/status-reports/Status"+pdfParse()+".pdf"); 
+});
+
+
 $(document).ready(function(){
-
-    $("#archive-select").change(function(){
-        if (this.value == "current"){
-            setLayer(latest);
-            getStats(latest);
-            makeTable(latest);
-            $("#qualifier").text("Current");
-            $("#date").text(prettydate(latest));
-            $("#table-date").text(prettydate(latest));
-            $("#forward").prop("disabled", true);
-        } else {
-            setLayer(this.value);
-            getStats(this.value);
-            makeTable(this.value);
-            $("#qualifier").text("Archived");
-            $("#date").text(prettydate(this.value));
-            $("#table-date").text(prettydate(this.value));
-            $("#forward").prop("disabled", false)
-        }
-        if (this.value == oldest){
-            $("#backward").prop("disabled", true);
-        } else {
-            $("#backward").prop("disabled", false)
-        }
-    });
-
-    $("#forward").click(function(){
-        $("#archive-select > option:selected")
-            .prop("selected", false)
-            .prev()
-            .prop("selected", true)
-            .trigger("change");
-    });
-
-    $("#backward").click(function(){
-        $("#archive-select > option:selected")
-            .prop("selected", false)
-            .next()
-            .prop("selected", true)
-            .trigger("change");
-    });
-
-    $("#report-dl").on('click', function(){
-        window.open("pdf/status-reports/Status"+pdfParse()+".pdf"); 
-    });
-
-    $( "#expand-table" ).click(function() {
-            $("#table-div").slideToggle( "slow", function() {});
-    });
-
-    $('[data-toggle="tooltip"]').tooltip();     
-
-    $("#print-map").on('click', function(){
-        var d = $("#date").text();
-        window.open("images/status_maps/status_"+d+".jpg"); 
-    });
-
+    $('[data-toggle="tooltip"]').tooltip(); 
 });
