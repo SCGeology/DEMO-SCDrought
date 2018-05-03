@@ -64,17 +64,18 @@
         <h1 class="mt-4">Drought Conditions in South Carolina</h1>
 
         <!-- Heading Row -->
-        <div class="row my-4">
+        <div class="row mt-4 mb-2" id="status-div">
             <div class="col-lg-7">
                 <div id="map"></div>
-                <div id="thumb"></div>
-                <a id="table-link-btn" class="btn btn-outline-primary btn-sm" href="#tablemodal" data-toggle="modal" data-target="#tablemodal" role="button">Table View</a>
+                <div id="thumb d-print-none"></div>
             </div>
+            
+            <div id="loader" class="d-none"></div>
+            
             <!-- /.col-lg-8 -->
             <div class="col-lg-5">
-                <h4><span id="qualifier">Current</span> Status: <span id="date"></span></h4>
-                <h6 id="reportdl"><a href="#"> Drought Status Report (PDF) <i class="fas fa-download fa-lg"></i></a></h6>
-                <div id="con-table">
+                <h2 class="h4"><span id="qualifier">Current</span> Status: <span id="date"></span></h2>
+                <div id="con-table" class="d-print-none">
                     <div class="con-row">
                         <div class="con-head" id="Normal-h">Normal<span class="graph"></span></div>
                         <div class="con-value"><span id="Normal"></span></div>
@@ -96,10 +97,10 @@
                         <div class="con-value"><span id="Extreme"></span></div>
                     </div>
                 </div>
-                <p id="legend">Number of Counties in Each Category</p>
+                <p id="legend" class="d-print-none">Number of Counties in Each Category</p>
 
-                <h4>Archived Drought Status</h4>
-                <div class="archive-container">
+                <h3 class="h4 d-print-none">Archived Drought Status</h3>
+                <div class="archive-container d-print-none">
                     <form>
                         <button type="button" class="btn btn-info" id="backward" title="Click to view previous archived status maps."><i class="fas fa-chevron-circle-left fa-lg"></i></button>
                         <div class="form-group" id="archive-group">
@@ -111,33 +112,34 @@
                     </form>
                 </div>
             </div>
-
         </div>
-
-    <!--    
-        <div class="row my-2 mx-md-5 text-center">
-            <div class="col-sm-4 px-5 px-sm-3 px-lg-5 py-3 py-sm-0">
-                <a href="#tablemodal" data-toggle="modal" data-target="#tablemodal">
-                    <img class="img-fluid img-thumbnail" src="images/table.JPG" />
-                    <h5>Status Table View</h5>
-                </a>
-            </div>
-            <div class="col-sm-4 px-5 px-sm-3 px-lg-5 py-3 py-sm-0">
-                <a href="drought-history.html" target="_blank">
-                    <img class="img-fluid img-thumbnail" src="images/heatgrid.JPG" />
-                    <h5>Drought at a Glance</h5>
-                </a>
-            </div>
-            <div class="col-sm-4 px-5 px-sm-3 px-lg-5 py-3 py-sm-0">
-                <a href="#">
-                    <img class="img-fluid img-thumbnail" src="images/fire.jpg" />
-                    <h5>Historical Impacts</h5>
-                </a>
+        
+        <div class="d-none d-print-block"><img style="width: 250px;" src="images/print-legend.png"/></div>
+   
+        <div class="row mb-4 ml-1 text-center d-print-none">
+            <button class="btn btn-outline-primary btn-sm mr-2 mb-2" id="expand-table">Table View 
+                <i class="fas fa-table ml-2"></i></button>
+            <button class="btn btn-outline-primary btn-sm mr-2 mb-2" id="print-map">Save Map as Image
+                <i class="fas fa-image ml-2"></i></button>
+            <a href="#" class="btn btn-outline-primary btn-sm mr-2 mb-2" id="report-dl" role="button">Drought Status Report <i class="fas fa-file-pdf ml-2"></i></a>
+        </div>
+             
+        <div class="row m-4 d-print-block" id="table-div">
+            <h5>Drought Status: <span id="table-date"></span></h5>
+            <div>
+            <table id="drought-table">
+                <thead>
+                <tr>
+                    <th>County</th>
+                    <th>Status</th>
+                </tr>
+                </thead>
+                <tbody id="drought-table-body"></tbody>
+            </table>
             </div>
         </div>
--->
-
-        <div class="row my-2">
+        
+        <div class="row my-2 d-print-none">
             <div class="col-lg-12">
                 <h4>The Top Seven</h4>
                 <h5>South Carolina uses these seven indices and indicators to determine the current drought status.</h5>
@@ -153,14 +155,16 @@
                 </ul>
             </div>
         </div>
-
-        <p>To learn more about drought indices and indicators, how drought is measured, and who monitors drought in South Carolina,<br>check out <a href="resources.html">South Carolina Drought 101</a>.</p>
         
-        <div class="row my-4">
+        <div class="d-print-none">
+        <p>To learn more about drought indices and indicators, how drought is measured, and who monitors drought in South Carolina,<br>check out <a href="resources.html">South Carolina Drought 101</a>.</p>
+        </div>    
+        
+        <div class="row my-4 d-print-none">
             <div class="col-lg-12">
                 <h4>Other Drought Indicators</h4>
                 <p>There are numerous sources of information for assessing drought for different environmental factors and industries.</p>
-                <h6>Precipitation</h6>
+                <h5>Precipitation</h5>
                 <ul>
                     <li>Percent of Normal Rainfall (NOAA) <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="right" title="Updated daily to show cumulative dryness or wetness compare to long-term averages."></i></li>
                     <a href="https://water.weather.gov/precip/index.php?analysis_date=1521417600&lat=33.8370597171&location_name=CONUS_+_Puerto_Rico&location_type=us&lon=-81.2014116022&precip_layer=0.75&product=percent&recent_type=today&rfc_layer=-1&state_layer=-1&hsa_layer=-1&county_layer=-1&time_frame=last30days&time_type=recent&units=eng&zoom=7&domain=current" target="_blank">Last 30 Days</a>
@@ -171,7 +175,7 @@
                     <li><a href="http://www.sercc.com/climateinfo/temp_maps" target="_blank">Current Temperature Maps</a> - SE Regional Climate Center</li>
                     <li><a href="http://www.cpc.ncep.noaa.gov/soilmst/img/curr.w.rank.daily.gif" target="_blank">Current Soil Moisture Percentile Ranking</a></li>
                 </ul>
-                <h6>Water Resources</h6>
+                <h5>Water Resources</h5>
                 <ul>
                     <li><a href="http://www.dnr.sc.gov/water/hydro/groundwater/groundwater.html" target="_blank">South Carolina Groundwater Data Monitoring</a> - SCDNR</li>
                     <li><a href="https://www.usgs.gov/centers/sa-water/" target="_blank">South Carolina Groundwater Network</a> - USGS</li>
@@ -179,50 +183,31 @@
                     <li><a href="http://www.sas.usace.army.mil/">Savannah River Lake Levels</a> - USACE</li>
                     <li><a href="https://waterwatch.usgs.gov/index.php?sno=sc&yr=2008&dt=dv14d&btnGo=GO&m=sitedur" target="_blank">Duration Graphs for Lakes and Streams</a> - USGS</li>
                 </ul>
-                <h6>Forestry</h6>
+                <h5>Forestry</h5>
                 <ul>
                     <li><a href="http://www.state.sc.us/forest/bweather.htm" target="blank">Current Fire Weather</a> - SC Forestry Commission</li>
                     <li><a href="https://www.wfas.net/" target="_blank">Wildland Fire Assessment System</a> - USDA Forest Service</li>
                     <li><a href="https://www.wfas.net/images/firedanger/kbdi.png" target="_blank">National Keethc-Byram Soil Moisture Drought Index</a> - USDA Forest Service</li>
                     <li><a href="https://www.wfas.net/images/firedanger/da1panel.png" target="_blank">Departure from Average Greenness</a> - National Interagency Fire Center</li>
                 </ul>
+                <h5>Forecasts</h5>
+                <ul>
+                    <li><a href="http://www.wpc.ncep.noaa.gov/#page=qpf" target="_blank">Weather Prediction Center Quantitative Precipitation Forecasts (Day 1 to Day 7)</a></li>
+                    <li>Climate Prediction Center Outlooks:<br>
+                        <a href="http://www.cpc.ncep.noaa.gov/products/predictions/610day/" target="_blank">6 to 10 Day Outlooks</a><br>
+                        <a href="http://www.cpc.ncep.noaa.gov/products/predictions/814day/" target="_blank">8-14 Day Outlooks</a><br>
+                        <a href="http://www.cpc.ncep.noaa.gov/products/expert_assessment/season_drought.png" target="_blank">US Seasonal Drought Outlook</a><br><a href="http://www.cpc.ncep.noaa.gov/products/predictions/long_range/" target="_blank">Three Month Outlook</a>
+                    </li>
+                </ul>
                 
             </div>
         </div>
-
-        <!-- table popup modal. only visible when clicked from the link -->
-        <!-- The table will be populated with javascript when the map loads -->
-        <div class="modal fade" id="tablemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Drought Status: <span id="table-date"></span></h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <table id="drought-table">
-                            <thead>
-                            <tr>
-                                <th>County</th>
-                                <th>Status</th>
-                            </tr>
-                            </thead>
-                            <tbody id="drought-table-body"></tbody>
-                        </table>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
     </div>
     <!-- /.container -->
-
+    
      <!-- Footer -->
-    <footer class="py-5 bg-dark">
+    <footer class="py-5 bg-dark d-print-none">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 order-lg-2 text-center">
@@ -277,8 +262,11 @@
     <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin=""></script>
     <script src="https://unpkg.com/esri-leaflet@2.0.4/dist/esri-leaflet.js"></script>
 
+    <script src="vendor/html2canvas.min.js"></script>
+    
     <script src="js/droughtmap.js"></script>
     <script src="js/heatgrid.js"></script>
+    
 
 </body>
 
