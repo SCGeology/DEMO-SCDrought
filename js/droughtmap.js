@@ -1,8 +1,3 @@
-/* TO DO 
-
-Separate out stuff into multiple JS files, if you can. Not all of this needs to be loaded on some pages?
-
-*/
 var map = L.map('map', {
     zoomControl: false,
     maxZoom: 8,
@@ -92,7 +87,7 @@ function prettydate(field){
 function setDropdown(l) {
     $(fieldNames).each(function(i){
         if (i >0){
-            $("#archive-select").append('<option class="archived-status" value="'+fieldNames[i]+'">'+prettydate(fieldNames[i])+'</option>');
+            $("#archive-select").append('<option class="archived-status" value="'+fieldNames[i]+'" label="'+prettydate(fieldNames[i])+'">'+prettydate(fieldNames[i])+'</option>');
         }
     });
     $("#date").text(prettydate(l));
@@ -111,6 +106,10 @@ function makeTable(l){
     });
 }
 
+var setLastMtgDate = function(l){
+    $("#mtg-date").text(prettydate(l));
+}
+
 function getLatest() {
     statuslayer.metadata(function(error, metadata) {
         $.each(metadata.fields, function(i, v) {
@@ -124,8 +123,10 @@ function getLatest() {
         getStats(latest);
         setDropdown(latest);
         makeTable(latest);
+        setLastMtgDate(latest);
     });
 }
+
 //call to get data updated
 getLatest();
 
@@ -135,7 +136,7 @@ var pdfParse = function(){
 }
 
 $(document).ready(function(){
-
+    
     $("#archive-select").change(function(){
         if (this.value == "current"){
             setLayer(latest);

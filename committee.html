@@ -8,10 +8,19 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+        <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+    
     <title>SC Drought</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
     <link href="css/main.css" rel="stylesheet">
@@ -26,7 +35,17 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg  fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">                 <span id="big-brand" class="d-none d-sm-inline">South Carolina Drought</span>                  <span id="small-brand" class="d-sm-none">SC Drought</span>                 <img src="logos/drought_logo.png" id="head-logo"/>             </a>
+            
+            <div>
+                <a class="navbar-brand" href="index.html">
+                <span id="big-brand" class="d-none d-sm-inline">South Carolina Drought</span>
+                <span id="small-brand" class="d-sm-none">SC Drought</span>
+                </a>
+                <a class="d-block" id="nav-sco-link" href="http://dnr.sc.gov/climate/sco">SC State Climate Office</a>
+            </div>
+            
+            <img src="logos/drought_logo.png" id="head-logo" alt="South Carolina Drought Logo"/>
+            
             <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -53,22 +72,25 @@
     </nav>
 
     <!-- Page Content -->
-    <div class="container">
+    <div class="container" id="c-thetop">
 
-        <h1 class="my-4">South Carolina Drought Response Committee</h1>
+        <h1 class="mt-5 mb-4">South Carolina Drought Response Committee</h1>
         <p class="mb-4">The SC Drought Response Committee consists of state and local members and governs drought related issues and response in South Carolina. Local members are organized according to Drought Management Areas. The DRC is chaired and supported by the South Carolina Department of Natural Resources and the SC State Climatology Office. The DRC monitors climatic conditions, evaluates drought indicators, and consults with stakeholders to issue drought status updates. During severe or extreme drought, the DRC determines nonessential water use and issues declaration for water curtailment. </p>
         <div class="row">
             <div class="col-md-5">
                 <img src="images/dma_map.JPG" class="img-fluid" alt="sc drought response committee regions"/>
             </div>        
-            <div class="col-md-6 mt-4 mt-md-0 offset-md-1" id="committee-toc">
+            <div class="col-md-6 mt-4 mt-md-0 offset-md-1">
                 <h2 class="h5">Drought Management Areas</h2>
-                <a href="#west">West Drought Management Area</a><br>
-                <a href="#central">Central Drought Management Area</a><br>
-                <a href="#northeast">Northeast Drought Management Area</a><br>
-                <a href="#southern">Southern Drought Management Area</a>
+                <a href="#c-west">West Drought Management Area</a><br>
+                <a href="#c-central">Central Drought Management Area</a><br>
+                <a href="#c-northeast">Northeast Drought Management Area</a><br>
+                <a href="#c-southern">Southern Drought Management Area</a>
                 <h2 class="h5 mt-2">Statewide Members</h2>
-                <a href="#state">State Agency Members</a><br>
+                <a href="#c-state">State Agency Members</a><br>
+                
+                <p class="mt-4">The <a href="pdf/DroughtResponse_Temp.pdf">Drought Response Flyer</a> will guide you through the Drought Response and Management Process.</p>
+                
                 <p class="mt-4">To learn more about how the committee monitors and identifies drought, visit the <a href="resources.html#q8">South Carolina Drought 101 page</a>.</p>
             </div>
         </div>
@@ -77,7 +99,7 @@
         <div class="row my-4">
             <div class="col-lg-12 tables">
                 
-                <div class="area" id="west"><h2 class="h5">West Drought Management Area</h2></div>        
+                <div class="area" id="c-west"><h2 class="h5">West Drought Management Area</h2></div>        
                     <p>Counties: Oconee, Pickens, Anderson, Abbeville, McCormick, Edgefield, Aiken, Barnwell, Allendale, Hampton, Jasper, Beaufort</p>
                 
                 <div class="container divTable">
@@ -91,12 +113,12 @@
                             <div class="col-sm-3">Agriculture</div>
                             <div class="col-sm-3">Reg Williams&nbsp;*Approved by Senate 6/6/02</div>
                             <div class="col-sm-2">Edgefield</div>
-                            <div class="col-sm-4"><i class="fas fa-plus-square"></i>
+                            <div class="col-sm-4"><button class="contact-link btn btn-outline-light" aria-label="Expand or collapse contact information for Reg Williams."><i aria-hidden class="fas fa-plus-square"></i></button>
                                 <ul class="contact-info">
                                     <li>Farm Bureau, 851 Columbia Rd., Edgefield, SC 29824</li>
                                     <li>Ph: 803-637-3265</li>
                                     <li>Fax: 803-637-3267</li>
-                                    <li>E-mail: info@logcreektimber.com</li>
+                                    <li>Email: <a href="mailto:info@logcreektimber.com">info@logcreektimber.com</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -116,10 +138,10 @@
                             <div class="col-sm-3">Domestic User</div>
                             <div class="col-sm-3">Pickens Williams - Appointment Pending</div>
                             <div class="col-sm-2">Barnwell</div>
-                            <div class="col-sm-4"><i class="fas fa-plus-square"></i>
+                            <div class="col-sm-4"><button class="contact-link btn btn-outline-light" aria-label="Expand or collapse contact information for Pickens Williams."><i aria-hidden class="fas fa-plus-square"></i></button>
                                 <ul class="contact-info">
                                     <li>Ph: 803-571-4851</li>
-                                    <li>E-mail: ebwilliams@bellsouth.net</li>
+                                    <li>Email: <a href="mailto:ebwilliams@bellsouth.net">ebwilliams@bellsouth.net</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -127,11 +149,11 @@
                             <div class="col-sm-3">Industry</div>
                             <div class="col-sm-3">David Evans - Appointment Pending</div>
                             <div class="col-sm-2">Pickens</div>
-                            <div class="col-sm-4"><i class="fas fa-plus-square"></i>
+                            <div class="col-sm-4"><button class="contact-link btn btn-outline-light" aria-label="Expand or collapse contact information for David Evans."><i aria-hidden class="fas fa-plus-square"></i></button>
                                 <ul class="contact-info">
                                     <li>Milliken &amp; Company, M-490, PO Box 1926, Spartanburg, SC, 29304</li>
                                     <li>Ph: Office 864.503.1747, Cell 864.316.6873</li>
-                                    <li>E-mail: David.Evans@Milliken.com</li>
+                                    <li>Email: <a href="mailto:David.Evans@Milliken.com">David.Evans@Milliken.com</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -139,11 +161,11 @@
                             <div class="col-sm-3">Municipalities</div>
                             <div class="col-sm-3">Daryl Cooper - Appointment Pending</div>
                             <div class="col-sm-2">Aiken</div>
-                            <div class="col-sm-4"><i class="fas fa-plus-square"></i>
+                            <div class="col-sm-4"><button class="contact-link btn btn-outline-light" aria-label="Expand or collapse contact information for Daryl Cooper."><i aria-hidden class="fas fa-plus-square"></i></button>
                                 <ul class="contact-info">
                                     <li>Town of Wagener, 111 Railroad Ave, Wagener, SC, 29164</li>
                                     <li>Ph: 803-564-3412</li>
-                                    <li>E-mail: daryl@wagenersc.com</li>
+                                    <li>Email: <a href="mailto:daryl@wagenersc.com">daryl@wagenersc.com</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -151,20 +173,20 @@
                             <div class="col-sm-3">Power Generation Facilities</div>
                             <div class="col-sm-3">Preston Pierce - Appointment Pending</div>
                             <div class="col-sm-2">Oconee</div>
-                            <div class="col-sm-4"><i class="fas fa-plus-square"></i>
+                            <div class="col-sm-4"><button class="contact-link btn btn-outline-light" aria-label="Expand or collapse contact information for Preston Pierce."><i aria-hidden class="fas fa-plus-square"></i></button>
                                 <ul class="contact-info">
                                     <li>Duke Energy Hydro West Bad Creek, 151 Bad Creek Rd, Salem, SC  29676
                                         </li>
                                     <li>Ph: Office 864-944-4001, Cell 727-409-0450 </li>
-                                    <li>E-mail: preston.pierce@duke-energy.com</li>
+                                    <li>Email: <a href="mailto:preston.pierce@duke-energy.com">preston.pierce@duke-energy.com</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-3">Private Water Supplier</div>
-                            <div class="col-sm-3">Mr. J. Scott Willett</div>
+                            <div class="col-sm-3">J. Scott Willett</div>
                             <div class="col-sm-2">Anderson</div>
-                            <div class="col-sm-4"><i class="fas fa-plus-square"></i>
+                            <div class="col-sm-4"><button class="contact-link btn btn-outline-light" aria-label="Expand or collapse contact information for J. Scott Willett."><i aria-hidden class="fas fa-plus-square"></i></button>
                                 <ul class="contact-info">
                                     <li>998 Hunters Trail, Anderson, SC 29625</li>
                                     <li>Ph: 864-231-5987</li>
@@ -175,11 +197,11 @@
                             <div class="col-sm-3">Public Service District</div>
                             <div class="col-sm-3">Chris Rasco - Appointment Pending</div>
                             <div class="col-sm-2">Anderson</div>
-                            <div class="col-sm-4"><i class="fas fa-plus-square"></i>
+                            <div class="col-sm-4"><button class="contact-link btn btn-outline-light" aria-label="Expand or collapse contact information for Chris Rasco."><i aria-hidden class="fas fa-plus-square"></i></button>
                                 <ul class="contact-info">
                                     <li>Powdersville Water, 1719 Circle Road, Powdersville, SC 29642</li>
                                     <li>Ph: 864-918-5868 </li>
-                                    <li>E-mail: crasco@powdersvillewater.org</li>
+                                    <li>Email: <a href="mailto:crasco@powdersvillewater.org">crasco@powdersvillewater.org</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -193,11 +215,11 @@
                             <div class="col-sm-3">Soil &amp; Water Conservation Dist.</div>
                             <div class="col-sm-3">Yvonne Kling - Appointment Pending</div>
                             <div class="col-sm-2">Aiken</div>
-                            <div class="col-sm-4"><i class="fas fa-plus-square"></i>
+                            <div class="col-sm-4"><button class="contact-link btn btn-outline-light" aria-label="Expand or collapse contact information for Yvonne Kling."><i aria-hidden class="fas fa-plus-square"></i></button>
                                 <ul class="contact-info">
                                     <li>Aiken Soil and Water Conservation, 1583 Old Jackson Hwy, Jackson, SC 29831</li>
                                     <li>Ph: 803-634-2435</li>
-                                    <li>E-mail: vonnie.kling7@gmail.com</li>
+                                    <li>Email: <a href="mailto:vonnie.kling7@gmail.com">vonnie.kling7@gmail.com</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -205,17 +227,17 @@
                             <div class="col-sm-3">Special Purpose District</div>
                             <div class="col-sm-3">Ed Saxon - Appointment Pending</div>
                             <div class="col-sm-2">Beaufort</div>
-                            <div class="col-sm-4"><i class="fas fa-plus-square"></i>
+                            <div class="col-sm-4"><button class="contact-link btn btn-outline-light" aria-label="Expand or collapse contact information for Ed Saxon."><i aria-hidden class="fas fa-plus-square"></i></button>
                                 <ul class="contact-info">
                                     <li>Beaufort Jasper Water Sewer Authority, 6 Snake Rd, Okatie, SC 29909</li>
                                     <li>Ph: Office 843-987-9200, Cell 843-263-1924</li>
-                                    <li>E-mail: EdS@bjwsa.org</li>
+                                    <li>Email: <a href="mailto:EdS@bjwsa.org">EdS@bjwsa.org</a></li>
                                 </ul>
                             </div>
                         </div>
                 </div>
                 
-                <div class="area" id="central"><h2 class="h5">Central Drought Management Area</h2></div>
+                <div class="area" id="c-central"><h2 class="h5">Central Drought Management Area</h2></div>
                 <p>Counties: Greenville, Spartanburg, Cherokee, York, Laurens, Union, Chester, Greenwood, Saluda, Newberry, Fairfield, Lexington, Richland, Calhoun, Sumter, Clarendon, Williamsburg, Georgetown</p>
                 <div class="container divTable">
                         <div class="row">
@@ -234,12 +256,12 @@
                             <div class="col-sm-3">Commission of Public Works</div>
                             <div class="col-sm-3">John W. Westcott *Approved by Senate 5/06</div>
                             <div class="col-sm-2">Spartanburg</div>
-                            <div class="col-sm-4"><i class="fas fa-plus-square"></i>
+                            <div class="col-sm-4"><button class="contact-link btn btn-outline-light" aria-label="Expand or collapse contact information for John W. Westcott."><i aria-hidden class="fas fa-plus-square"></i></button>
                                 <ul class="contact-info">
                                     <li>Spartanburg Water System / Spartanburg Sanitary Sewer District, 297 South Avenue, Spartanburg, SC 29306</li>
                                     <li>Ph: (864) 580-5685</li>
                                     <li>Fax: (864) 253-9382</li>
-                                    <li>E-mail: jwestcott@sws-sssd.org</li>
+                                    <li>Email: <a href="mailto:jwestcott@sws-sssd.org">jwestcott@sws-sssd.org</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -265,7 +287,7 @@
                             <div class="col-sm-3">Municipalities</div>
                             <div class="col-sm-3">James G. Bagley *Appointed 8/16/10</div>
                             <div class="col-sm-2">York</div>
-                            <div class="col-sm-4"><i class="fas fa-plus-square"></i>
+                            <div class="col-sm-4"><button class="contact-link btn btn-outline-light" aria-label="Expand or collapse contact information for James G. Bagley."><i aria-hidden class="fas fa-plus-square"></i></button>
                                 <ul class="contact-info">
                                     <li>P.O. Box 11706, Rock Hill, SC 29731</li>
                                     <li>Ph: 803-329-5518</li>
@@ -277,11 +299,11 @@
                             <div class="col-sm-3">Power Generation Facilities</div>
                             <div class="col-sm-3">Alan Stuart - Appointment Pending</div>
                             <div class="col-sm-2">York</div>
-                            <div class="col-sm-4"><i class="fas fa-plus-square"></i>
+                            <div class="col-sm-4"><button class="contact-link btn btn-outline-light" aria-label="Expand or collapse contact information for Alan Stuart."><i aria-hidden class="fas fa-plus-square"></i></button>
                                 <ul class="contact-info">
                                     <li>Duke Energy, 526 South Church Street, Mail Code EC12Y, Charlotte, NC 29802</li>
                                     <li>Ph: 803-640-8765</li>
-                                    <li>E-mail: Alan.stuart@duke-energy.com</li>
+                                    <li>Email: <a href="mailto:Alan.stuart@duke-energy.com">Alan.stuart@duke-energy.com</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -289,12 +311,12 @@
                             <div class="col-sm-3">Private Water Supplier</div>
                             <div class="col-sm-3">Brad C. Powers *Approved by Senate 5/2007</div>
                             <div class="col-sm-2">Spartanburg</div>
-                            <div class="col-sm-4"><i class="fas fa-plus-square"></i>
+                            <div class="col-sm-4"><button class="contact-link btn btn-outline-light" aria-label="Expand or collapse contact information for Brad C. Powers."><i aria-hidden class="fas fa-plus-square"></i></button>
                                 <ul class="contact-info">
                                     <li>2241 Fews Chapel Road, Greer, SC 29651</li>
                                     <li>Ph: 864-895-1719</li>
                                     <li>Fax: 864-895-7152</li>
-                                    <li>E-mail: brad@brrwc.org</li>
+                                    <li>Email: <a href="mailto:brad@brrwc.org">brad@brrwc.org</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -308,11 +330,11 @@
                             <div class="col-sm-3">Regional Council of Gov.</div>
                             <div class="col-sm-3">Gregory Sprouse - Appointment Pending</div>
                             <div class="col-sm-2">Richland</div>
-                            <div class="col-sm-4"><i class="fas fa-plus-square"></i>
+                            <div class="col-sm-4"><button class="contact-link btn btn-outline-light" aria-label="Expand or collapse contact information for Gregory Sprouse."><i aria-hidden class="fas fa-plus-square"></i></button>
                                 <ul class="contact-info">
                                     <li>Central Midlands Council of Governments, 236 Stoneridge Drive, Columbia, SC 29210 </li>
                                     <li>Ph: 803-744-5158</li>
-                                    <li>E-mail: gsprouse@centralmidlands.org</li>
+                                    <li>Email: <a href="mailto:gsprouse@centralmidlands.org">gsprouse@centralmidlands.org</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -320,11 +342,11 @@
                             <div class="col-sm-3">Soil and Water Conservation District</div>
                             <div class="col-sm-3">John T. Rivers *Approved by Senate 3/08</div>
                             <div class="col-sm-2">Sumter</div>
-                            <div class="col-sm-4"><i class="fas fa-plus-square"></i>
+                            <div class="col-sm-4"><button class="contact-link btn btn-outline-light" aria-label="Expand or collapse contact information for John T. Rivers."><i aria-hidden class="fas fa-plus-square"></i></button>
                                 <ul class="contact-info">
                                     <li>1261 Manning Drive, Summerton, SC 29148</li>
                                     <li>Ph: 803-469-0744</li>
-                                    <li>E-mail: bdjrivers@ftc-i.net</li>
+                                    <li>Email: <a href="mailto:bdjrivers@ftc-i.net">bdjrivers@ftc-i.net</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -332,18 +354,18 @@
                             <div class="col-sm-3">Special Purpose District</div>
                             <div class="col-sm-3">Mike Caston *Approved by Senate 5/06</div>
                             <div class="col-sm-2">Saluda</div>
-                            <div class="col-sm-4"><i class="fas fa-plus-square"></i>
+                            <div class="col-sm-4"><button class="contact-link btn btn-outline-light" aria-label="Expand or collapse contact information for Mike Caston."><i aria-hidden class="fas fa-plus-square"></i></button>
                                 <ul class="contact-info">
                                     <li>SJWD Water District, P.O.Box 607, Lyman, SC 29365</li>
                                     <li>Ph: 864-949-2802</li>
                                     <li>Fax: 864-949-3511</li>
-                                    <li>E-mail: mcaston@sjwd.com</li>
+                                    <li>Email: <a href="mailto:mcaston@sjwd.com">mcaston@sjwd.com</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 
-                <div class="area" id="northeast"><h2 class="h5">Northeast Drought Management Area</h2></div>
+                <div class="area" id="c-northeast"><h2 class="h5">Northeast Drought Management Area</h2></div>
                 <p>Counties: Kershaw, Lancaster, Lee, Chesterfield,Darlington, Dillon, Marlboro, Florence, Marion, Horry</p>
                 <div class="container divTable">
                         <div class="row">
@@ -356,12 +378,12 @@
                             <div class="col-sm-3">Agriculture</div>
                             <div class="col-sm-3">Patricia E. "Trish" DeHond - Appointment Pending </div>
                             <div class="col-sm-2">Darlington</div>
-                            <div class="col-sm-4"><i class="fas fa-plus-square"></i>
+                            <div class="col-sm-4"><button class="contact-link btn btn-outline-light" aria-label="Expand or collapse contact information for Patricia E. DeHond."><i aria-hidden class="fas fa-plus-square"></i></button>
                                 <ul class="contact-info">
                                     <li>Chesterfield, Darlington &amp; Marlboro Counties Cooperative Extension Service</li>
                                     <li>300 Russell Street, Room 222, Darlington, SC 29532 </li>
                                     <li>Ph: 843-858-0754 </li>
-                                    <li>E-mail: pdehond@clemson.edu</li>
+                                    <li>Email: <a href="mailto:pdehond@clemson.edu">pdehond@clemson.edu</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -387,11 +409,11 @@
                             <div class="col-sm-3">Industry</div>
                             <div class="col-sm-3">Athena Strickland - Appointment Pending</div>
                             <div class="col-sm-2">Marlboro</div>
-                            <div class="col-sm-4"><i class="fas fa-plus-square"></i>
+                            <div class="col-sm-4"><button class="contact-link btn btn-outline-light" aria-label="Expand or collapse contact information for Athena Strickland."><i aria-hidden class="fas fa-plus-square"></i></button>
                                 <ul class="contact-info">
                                     <li>Domtar Paper - Marlboro Mill, 585 Willamette Rd, Bennettsville, SC 29512</li>
                                     <li>Ph: 843-454-8955</li>
-                                    <li>E-mail: athena.strickland@domtar.com</li>
+                                    <li>Email: <a href="mailto:athena.strickland@domtar.com">athena.strickland@domtar.com</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -405,11 +427,11 @@
                             <div class="col-sm-3">Municipalities</div>
                             <div class="col-sm-3">Clint Elliot - Appointment Pending</div>
                             <div class="col-sm-2">Horry</div>
-                            <div class="col-sm-4"><i class="fas fa-plus-square"></i>
+                            <div class="col-sm-4"><button class="contact-link btn btn-outline-light" aria-label="Expand or collapse contact information for Clint Elliot."><i aria-hidden class="fas fa-plus-square"></i></button>
                                 <ul class="contact-info">
                                     <li>Grand Strand Water and Sewer</li>
                                     <li>166 Jackson Bluff Rd, Conway, SC, 29526 </li>
-                                    <li>E-mail: ClintElliott@gswsa.com</li>
+                                    <li>Email: <a href="mailto:ClintElliott@gswsa.com">ClintElliott@gswsa.com</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -423,11 +445,11 @@
                             <div class="col-sm-3">Private Water Supplier</div>
                             <div class="col-sm-3">Robert L. Brock</div>
                             <div class="col-sm-2">Marlboro</div>
-                            <div class="col-sm-4"><i class="fas fa-plus-square"></i>
+                            <div class="col-sm-4"><button class="contact-link btn btn-outline-light" aria-label="Expand or collapse contact information for Robert L. Brock."><i aria-hidden class="fas fa-plus-square"></i></button>
                                 <ul class="contact-info">
                                     <li>P.O. Box 296, 187 Hunts Bluff Road, Blenheim, SC 29516</li>
                                     <li>Ph: 843-479-8988</li>
-                                    <li>E-mail: bbrock@sc.metrocast.net</li>
+                                    <li>Email: <a href="mailto:bbrock@sc.metrocast.net">bbrock@sc.metrocast.net</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -435,7 +457,7 @@
                             <div class="col-sm-3">Public Service District</div>
                             <div class="col-sm-3">Elbert Warren</div>
                             <div class="col-sm-2">Darlington</div>
-                            <div class="col-sm-4"><i class="fas fa-plus-square"></i>
+                            <div class="col-sm-4"><button class="contact-link btn btn-outline-light" aria-label="Expand or collapse contact information for Elbert Warren."><i aria-hidden class="fas fa-plus-square"></i></button>
                                 <ul class="contact-info">
                                     <li>2813 Antioch Road, Hartsville, SC 29550</li>
                                     <li>Ph: 843-332-7789</li>
@@ -450,9 +472,9 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-3">Special Purpose District</div>
-                            <div class="col-sm-3">Michael E. Hancock Term expiration: March 1, 2012</div>
+                            <div class="col-sm-3">Michael E. Hancock</div>
                             <div class="col-sm-2">Kershaw</div>
-                            <div class="col-sm-4"><i class="fas fa-plus-square"></i>
+                            <div class="col-sm-4"><button class="contact-link btn btn-outline-light" aria-label="Expand or collapse contact information for Michael E. Hancock."><i aria-hidden class="fas fa-plus-square"></i></button>
                                 <ul class="contact-info">
                                     <li>Lugoff-Elgin Water Authority, PO Box 125, Lugoff, South Carolina 29078</li>
                                     <li>Ph: 803-438-2991</li>
@@ -461,7 +483,7 @@
                         </div>
                     </div>
                 
-                <div class="area" id="southern"><h2 class="h5">Southern Drought Management Area</h2></div>
+                <div class="area" id="c-southern"><h2 class="h5">Southern Drought Management Area</h2></div>
                 <p>Counties: Orangeburg, Bamberg, Colleton, Dorchester, Berkeley, Charleston</p>
                 <div class="container divTable">   
                         <div class="row">
@@ -474,11 +496,11 @@
                             <div class="col-sm-3">Agriculture</div>
                             <div class="col-sm-3">James Traywick</div>
                             <div class="col-sm-2">Orangeburg</div>
-                            <div class="col-sm-4"><i class="fas fa-plus-square"></i>
+                            <div class="col-sm-4"><button class="contact-link btn btn-outline-light" aria-label="Expand or collapse contact information for James Traywick."><i aria-hidden class="fas fa-plus-square"></i></button>
                                 <ul class="contact-info">
                                     <li>Frog Level Farm Inc. 4712 Cordova Road, Cope, SC 29038</li>
                                     <li>Ph: 803-536-2946</li>
-                                    <li>E-mail: jimtraywick@gmail.com</li>
+                                    <li>Email: <a href="mailto:jimtraywick@gmail.com">jimtraywick@gmail.com</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -486,12 +508,12 @@
                             <div class="col-sm-3">Commission of Public Works</div>
                             <div class="col-sm-3">Andrew Fair</div>
                             <div class="col-sm-2">Charleston</div>
-                            <div class="col-sm-4"><i class="fas fa-plus-square"></i>
+                            <div class="col-sm-4"><button class="contact-link btn btn-outline-light" aria-label="Expand or collapse contact information for Andrew Fair."><i aria-hidden class="fas fa-plus-square"></i></button>
                                 <ul class="contact-info">
                                     <li>Charleston Water System, 103 St Philip Street, Charleston, SC 29403</li>
                                     <li>Ph: 843-727-7150</li>
                                     <li>Fax: 843-727-7188</li>
-                                    <li>Email: FaireyAW@charlestoncpw.com</li>
+                                    <li>Email: <a href="mailto:FaireyAW@charlestoncpw.com">FaireyAW@charlestoncpw.com</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -505,9 +527,9 @@
                             <div class="col-sm-3">Domestic User</div>
                             <div class="col-sm-3">Chris Bickley - Appointment Pending</div>
                             <div class="col-sm-2">Colleton</div>
-                            <div class="col-sm-4"><i class="fas fa-plus-square"></i>
+                            <div class="col-sm-4"><button class="contact-link btn btn-outline-light" aria-label="Expand or collapse contact information for Chris Bickley."><i aria-hidden class="fas fa-plus-square"></i></button>
                                 <ul class="contact-info">
-                                    <li>Email: chrisbickley123@gmail.com</li>
+                                    <li>Email: <a href="mailto:chrisbickley123@gmail.com">chrisbickley123@gmail.com</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -521,12 +543,12 @@
                             <div class="col-sm-3">Municipalities</div>
                             <div class="col-sm-3">Eric Odom</div>
                             <div class="col-sm-2">Orangeburg</div>
-                            <div class="col-sm-4"><i class="fas fa-plus-square"></i>
+                            <div class="col-sm-4"><button class="contact-link btn btn-outline-light" aria-label="Expand or collapse contact information for Eric Odom."><i aria-hidden class="fas fa-plus-square"></i></button>
                                 <ul class="contact-info">
                                     <li>Department of Public Utilities, City Of Orangeburg, P.O. Box 1057, Orangeburg, SC 29116</li>
                                     <li>Ph: 803-268-4401</li>
                                     <li>Fax: 803-531-3803</li>
-                                    <li>E-mail: eodom@orbgdpu.com</li>
+                                    <li>Email: <a href="mailto:eodom@orbgdpu.com">eodom@orbgdpu.com</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -552,7 +574,7 @@
                             <div class="col-sm-3">Regional Council of Gov.</div>
                             <div class="col-sm-3">Ronald E. Mitchum</div>
                             <div class="col-sm-2">Charleston</div>
-                            <div class="col-sm-4"><i class="fas fa-plus-square"></i>
+                            <div class="col-sm-4"><button class="contact-link btn btn-outline-light" aria-label="Expand or collapse contact information for Ronald E. Mitchum."><i aria-hidden class="fas fa-plus-square"></i></button>
                                 <ul class="contact-info">
                                     <li>1362 McMillan Avenue, Suite 100, North Charleston, SC 29405</li>
                                     <li>Ph: 843-529-0400</li>
@@ -564,12 +586,12 @@
                             <div class="col-sm-3">Soil &amp; Water Conservation Dist.</div>
                             <div class="col-sm-3">Marion L. Rizer</div>
                             <div class="col-sm-2">Colleton</div>
-                            <div class="col-sm-4"><i class="fas fa-plus-square"></i>
+                            <div class="col-sm-4"><button class="contact-link btn btn-outline-light" aria-label="Expand or collapse contact information for Marion L. Rizer."><i aria-hidden class="fas fa-plus-square"></i></button>
                                 <ul class="contact-info">
                                     <li>2778 Confederate Highway, Lodge, SC 29082</li>
                                     <li>Ph: 843-549-1821(W)</li>
                                     <li>Ph: 843-866-2729(H)</li>
-                                    <li>E-mail: rizerfarm@yahoo.com</li>
+                                    <li>Email: <a href="mailto:rizerfarm@yahoo.com">rizerfarm@yahoo.com</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -582,7 +604,7 @@
                 
                 
                 
-                <div class="area" id="state"><h2 class="h5">State Agency Members</h2></div>
+                <div class="area" id="c-state"><h2 class="h5">State Agency Members</h2></div>
                 <div class="container divTable">   
                         <div class="row">
                             <div class="col-sm-3 header member">Committee Member</div>
@@ -592,11 +614,11 @@
                         <div class="row">
                             <div class="col-sm-3">Mr. Ken Rentiers</div>
                             <div class="col-sm-3">SCDNR, LWC Division</div>
-                            <div class="col-sm-6"><i class="fas fa-plus-square"></i>
+                            <div class="col-sm-6"><button class="contact-link btn btn-outline-light" aria-label="Expand or collapse contact information for Mr. Ken Rentiers."><i aria-hidden class="fas fa-plus-square"></i></button>
                                 <ul class="contact-info">
                                     <li>1000 Assembly Street, Columbia, SC 29201</li>
                                     <li>Ph: 803-734-9035</li>
-                                    <li>E-mail: rentiersk@dnr.sc.gov</li>
+                                    <li>Email: <a href="mailto:rentiersk@dnr.sc.gov">rentiersk@dnr.sc.gov</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -604,11 +626,11 @@
                         <div class="row">
                             <div class="col-sm-3">Mr. Marshall Sykes</div>
                             <div class="col-sm-3">SC Emergency Management Division</div>
-                            <div class="col-sm-6"><i class="fas fa-plus-square"></i>
+                            <div class="col-sm-6"><button class="contact-link btn btn-outline-light" aria-label="Expand or collapse contact information for Mr. Marshall Sykes."><i aria-hidden class="fas fa-plus-square"></i></button>
                                 <ul class="contact-info">
                                     <li>1100 Fish Hatchery Road, West Columbia, SC 29172</li>
                                     <li>Ph: 803-608-8991</li>
-                                    <li>E-mail: msykes@emd.sc.gov</li>
+                                    <li>Email: <a href="mailto:msykes@emd.sc.gov">msykes@emd.sc.gov</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -616,11 +638,11 @@
                         <div class="row">
                             <div class="col-sm-3">Mr. Rob Devlin</div>
                             <div class="col-sm-3">SCDHEC</div>
-                            <div class="col-sm-6"><i class="fas fa-plus-square"></i>
+                            <div class="col-sm-6"><button class="contact-link btn btn-outline-light" aria-label="Expand or collapse contact information for Mr. Rob Devlin."><i aria-hidden class="fas fa-plus-square"></i></button>
                                 <ul class="contact-info">
                                     <li>2600 Bull Street, Columbia, SC 29201</li>
                                     <li>Ph: 803-898-3798</li>
-                                    <li>E-mail: DEVLINRJ@dhec.sc.gov</li>
+                                    <li>Email: <a href="mailto:DEVLINRJ@dhec.sc.gov">DEVLINRJ@dhec.sc.gov</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -628,11 +650,11 @@
                         <div class="row">
                             <div class="col-sm-3">Mr. Darryl Jones</div>
                             <div class="col-sm-3">SC Forestry Commission</div>
-                            <div class="col-sm-6"><i class="fas fa-plus-square"></i>
+                            <div class="col-sm-6"><button class="contact-link btn btn-outline-light" aria-label="Expand or collapse contact information for Mr. Darryl Jones."><i aria-hidden class="fas fa-plus-square"></i></button>
                                 <ul class="contact-info">
                                     <li>P.O. Box 21707, Columbia, SC 29221</li>
                                     <li>Ph: 803-896-8800</li>
-                                    <li>E-mail: djones@forestry.state.sc.us</li>
+                                    <li>Email: <a href="mailto:djones@forestry.state.sc.us">djones@forestry.state.sc.us</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -640,11 +662,11 @@
                         <div class="row">
                             <div class="col-sm-3">Mr. Brad Boozer</div>
                             <div class="col-sm-3">SC Department of Agriculture</div>
-                            <div class="col-sm-6"><i class="fas fa-plus-square"></i>
+                            <div class="col-sm-6"><button class="contact-link btn btn-outline-light" aria-label="Expand or collapse contact information for Mr. Brad Boozer."><i aria-hidden class="fas fa-plus-square"></i></button>
                                 <ul class="contact-info">
                                     <li>P.O. Box 11280, Columbia, SC 29211</li>
                                     <li>Ph: 803-737-4531</li>
-                                    <li>E-mail: bboozer@scda.sc.gov</li>
+                                    <li>Email: <a href="mailto:bboozer@scda.sc.gov">bboozer@scda.sc.gov</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -656,14 +678,18 @@
 
     </div>
     
-    <a href="#committee-toc"><div id="backup"><i class="fas fa-angle-double-up fa-3x"></i></div></a>
+    <a href="#c-thetop">
+        <div id="backup">
+            <i aria-hidden class="fas fa-angle-double-up fa-3x" title="Go back to top of page."></i>
+            <span class="sr-only">Go back to top of page.</span>
+        </div>
+    </a>  
     
-     <!-- Footer -->
+    <!-- Footer -->
     <footer class="py-5 bg-dark">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 order-lg-2 text-center">
-                    <a href="http://dnr.sc.gov/climate/sco"><img src="logos/dnr_white_text.png" alt="scdnr logo" class="img-fluid mb-3" id="dnr-logo"/></a>
+                <div class="col-lg-4 order-lg-2 ">                
                     <p>SCDNR State Climate Office<br>
                     Land, Water, and Conservation Division<br>
                         State Climate Office<br>
@@ -671,10 +697,15 @@
                         Columbia, SC 29202<br>
                         <a href="http://dnr.sc.gov/climate/sco">dnr.sc.gov/climate/sco</a>
                     </p>
+                    <div>
+                    <a href="http://dnr.sc.gov/climate/sco"><img src="logos/dnr-logo.gif" alt="SC Department of Natural Resources logo." class="img-fluid my-3" id="dnr-logo"/></a>
+                    </div>
+                    <p class="mt-3">Copyright &copy; 2018</p>
                 </div>
-                <div class="col-lg-4 mt-4 mt-md-0 text-center text-md-right order-lg-3">
-                    <a href="http://dnr.sc.gov/climate/sco"><img src="logos/CISAlogoTEXT.png" alt="cisa logo" id="cisa-logo"/></a>
+                
+                <div class="col-lg-4 mt-4 mt-md-0 order-lg-3">
                     <p class="isa-text pt-1">
+                    Carolina's Integrated Sciences and Assessments<br>
                     University of South Carolina<br>
                     Deptartment of Geography<br>
                     Columbia, South Carolina<br>
@@ -682,9 +713,10 @@
                     cisa@sc.edu<br>
                     <a href="http://www.cisa.sc.edu/" target="_blank">cisa.sc.edu</a>    
                     </p>
-                    <p class="isa-text pl-lg-5 text-lg-right">CISA is one of NOAA's Regional Integrated Sciences and Assessments teams.</p>
-                    <a href="https://cpo.noaa.gov/Meet-the-Divisions/Climate-and-Societal-Interactions/RISA"><img src="logos/RISA_logo_highres_crop.png" alt="risa logo" id="risa-logo"/></a>
-                    
+                     
+                    <p class="isa-text mt-3">CISA is one of NOAA's Regional Integrated Sciences and Assessments teams.</p>
+                    <a href="http://dnr.sc.gov/climate/sco"><img src="logos/CISAlogoTEXT_sm.png" alt="Carolinas Integrated Sciences and Assessments logo" class="img-fluid m-3" id="cisa-logo"/></a>
+                    <a href="https://cpo.noaa.gov/Meet-the-Divisions/Climate-and-Societal-Interactions/RISA"><img src="logos/RISA_logo_highres_sm.png" alt="Regional Integrated Sciences and Assessments logo" class="img-fluid m-3" id="risa-logo"/></a>
                 </div>
                 <div class="col-lg-4 order-lg-1 mt-3 mt-lg-0 foot-nav">
                     <p class="m-1">SCDrought.com is brought to you by:<br>
@@ -699,7 +731,7 @@
                         <a href="planning.html">Drought Planning</a><br>
                         <a href="resources.html">Drought Resources</a><br>
                     </p>
-                    <p class="mt-3">Copyright &copy; 2018</p>
+                    
                 </div>
             </div>
             
@@ -708,34 +740,46 @@
     </footer>
     
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <script src="js/committee.js"></script>
+    <script   src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript --> <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     
     <script>
     $(document).ready(function(){
-    $(window).scroll(function() {
-        if ($(this).scrollTop() > 200) {
-            $('#backup:hidden').stop(true, true).fadeIn();
-        } else {
-            $('#backup').stop(true, true).fadeOut();
-        }
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $('#backup:hidden').stop(true, true).fadeIn();
+            } else {
+                $('#backup').stop(true, true).fadeOut();
+            }
+        });
+
+        $('a[href^="#c"]').on('click',function (e) {
+            e.preventDefault();
+
+            var target = this.hash;
+            var $target = $(target);
+
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top
+            }, 900, 'swing', function () {
+                window.location.hash = target;
+            });
+        });
+        
+        //color vacant cells for committee members table
+
+        $( ".divTableCell:contains('Vacant')" ).parent().css( "color", "#7c1a04" );
+
+        $( ".contact-link" ).on('click',function(e) {
+            e.preventDefault();
+            $(this).next(".contact-info").slideToggle( "slow", function() {});
+            $(this).children().first().toggleClass("fa-minus-square fa-plus-square");
+        });
+
+        $( ".col-sm-3:contains('Vacant')" ).css( "color", "#910c00" )
+
     });
-    
-	$('a[href^="#"]').on('click',function (e) {
-	    e.preventDefault();
 
-	    var target = this.hash;
-	    var $target = $(target);
-
-	    $('html, body').stop().animate({
-	        'scrollTop': $target.offset().top
-	    }, 900, 'swing', function () {
-	        window.location.hash = target;
-	    });
-	});    
-});
     </script>
 
 </body>

@@ -8,10 +8,19 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+        <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+    
     <title>SC Drought</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
     <link href="css/main.css" rel="stylesheet">
@@ -26,7 +35,16 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg  fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">                 <span id="big-brand" class="d-none d-sm-inline">South Carolina Drought</span>                  <span id="small-brand" class="d-sm-none">SC Drought</span>                 <img src="logos/drought_logo.png" id="head-logo"/>             </a>
+            
+            <div>
+                <a class="navbar-brand" href="index.html">
+                <span id="big-brand" class="d-none d-sm-inline">South Carolina Drought</span>
+                <span id="small-brand" class="d-sm-none">SC Drought</span>
+                </a>
+                <a class="d-block" id="nav-sco-link" href="http://dnr.sc.gov/climate/sco">SC State Climate Office</a>
+            </div>
+            
+            <img src="logos/drought_logo.png" id="head-logo" alt="South Carolina Drought Logo"/>
             <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -55,7 +73,7 @@
     <!-- Page Content -->
     <div class="container">
 
-        <h1 class="mt-4">South Carolina Drought Planning</h1>
+        <h1 class="mt-5">South Carolina Drought Planning</h1>
 
         <!-- Heading Row -->
         <div class="row my-4">
@@ -68,6 +86,7 @@
                     <li>The Forestry Commission</li>
                     <li>Department of Natural Resources</li>
                 </ul>
+                <p><i class="fas fa-video mr-2"></i> <a href="https://www.youtube.com/watch?v=7qCIlsgfnkg">Watch an interview</a> with South Carolina State Climatologist Hope Mizzell. Dr. Mizzell discusses the State Climate Office's role in administration of the South Carolina Drought Response Act.</p>
             </div>
             <div class="col-lg-5">
                 <figure class="figure">
@@ -79,6 +98,9 @@
         <div class="row my-4">
             <div class="col">
                 <p>The Drought Response Act requires all public water suppliers to develop and implement local drought plans and ordinances. <em>The Drought Regulations recognize that local governments have primary responsibility for alleviating drought impacts and encourage cooperation among neighboring water systems</em>. DNR created a <a href="http://www.cisa.sc.edu/PDFs/2017 SC Drought Tabletop Exercise/SC Model Drought Management Plan and Ordinance.pdf" target="_blank">sample drought plan</a> and ordinance for local governments and water systems to use in developing their own documents.</p>
+                
+                <p class="border border-info p-3 rounded" style="background-color:#f7ebbe;">You can search for and view approved water system drought plans and ordinances through the <a href="http://www.dnr.sc.gov/pls/drought/drought_survey_search">Drought Management Plan and Response Ordinance Inventory</a>.</p>
+                
                 <p>The <a href="http://www.cisa.sc.edu/PDFs/2017%20SC%20Drought%20Tabletop%20Exercise/SC%20Drought%20Response%20Plan-EOP%202017.pdf" target="_blank">South Carolina Drought Response Plan</a> is located in Appendix 10 of the State’s Emergency Operations Plan (EOP). The Drought Response Plan describes actions when drought conditions have reached a level of severity beyond the scope of the DRC and local communities.  The South Carolina Emergency Management Division (EMD) maintains the EOP and leads multi-agency response to hazard events. Upon an activation of the EOP, EMD and the State Emergency Response Team (SERT) assemble in the South Carolina Emergency Operations Center to coordinate the State’s response.</p>
                 
                 <h2 class="h4">South Carolina Drought and Water Shortage Tabletop Exercise</h2>
@@ -95,7 +117,6 @@ shortages.</p>
                 </ul>
                 
                 <h2 class="h4">Drought Planning Documents</h2>
-                
                 <ul>
                     <li><a href="http://www.cisa.sc.edu/PDFs/2017%20SC%20Drought%20Tabletop%20Exercise/SC%20Drought%20Response%20Act.pdf" target="_blank">SC Drought Response Act</a></li>
                     <li><a href="http://www.cisa.sc.edu/PDFs/2017%20SC%20Drought%20Tabletop%20Exercise/SC%20Drought%20Response%20Plan-EOP%202017.pdf" target="_blank">SC Drought Response Emergency Operations Plan</a></li>
@@ -114,8 +135,7 @@ shortages.</p>
     <footer class="py-5 bg-dark">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 order-lg-2 text-center">
-                    <a href="http://dnr.sc.gov/climate/sco"><img src="logos/dnr_white_text.png" alt="scdnr logo" class="img-fluid mb-3" id="dnr-logo"/></a>
+                <div class="col-lg-4 order-lg-2 ">                
                     <p>SCDNR State Climate Office<br>
                     Land, Water, and Conservation Division<br>
                         State Climate Office<br>
@@ -123,10 +143,15 @@ shortages.</p>
                         Columbia, SC 29202<br>
                         <a href="http://dnr.sc.gov/climate/sco">dnr.sc.gov/climate/sco</a>
                     </p>
+                    <div>
+                    <a href="http://dnr.sc.gov/climate/sco"><img src="logos/dnr-logo.gif" alt="SC Department of Natural Resources logo." class="img-fluid my-3" id="dnr-logo"/></a>
+                    </div>
+                    <p class="mt-3">Copyright &copy; 2018</p>
                 </div>
-                <div class="col-lg-4 mt-4 mt-md-0 text-center text-md-right order-lg-3">
-                    <a href="http://dnr.sc.gov/climate/sco"><img src="logos/CISAlogoTEXT.png" alt="cisa logo" id="cisa-logo"/></a>
+                
+                <div class="col-lg-4 mt-4 mt-md-0 order-lg-3">
                     <p class="isa-text pt-1">
+                    Carolina's Integrated Sciences and Assessments<br>
                     University of South Carolina<br>
                     Deptartment of Geography<br>
                     Columbia, South Carolina<br>
@@ -134,9 +159,10 @@ shortages.</p>
                     cisa@sc.edu<br>
                     <a href="http://www.cisa.sc.edu/" target="_blank">cisa.sc.edu</a>    
                     </p>
-                    <p class="isa-text pl-lg-5 text-lg-right">CISA is one of NOAA's Regional Integrated Sciences and Assessments teams.</p>
-                    <a href="https://cpo.noaa.gov/Meet-the-Divisions/Climate-and-Societal-Interactions/RISA"><img src="logos/RISA_logo_highres_crop.png" alt="risa logo" id="risa-logo"/></a>
-                    
+                     
+                    <p class="isa-text mt-3">CISA is one of NOAA's Regional Integrated Sciences and Assessments teams.</p>
+                    <a href="http://dnr.sc.gov/climate/sco"><img src="logos/CISAlogoTEXT_sm.png" alt="Carolinas Integrated Sciences and Assessments logo" class="img-fluid m-3" id="cisa-logo"/></a>
+                    <a href="https://cpo.noaa.gov/Meet-the-Divisions/Climate-and-Societal-Interactions/RISA"><img src="logos/RISA_logo_highres_sm.png" alt="Regional Integrated Sciences and Assessments logo" class="img-fluid m-3" id="risa-logo"/></a>
                 </div>
                 <div class="col-lg-4 order-lg-1 mt-3 mt-lg-0 foot-nav">
                     <p class="m-1">SCDrought.com is brought to you by:<br>
@@ -151,7 +177,7 @@ shortages.</p>
                         <a href="planning.html">Drought Planning</a><br>
                         <a href="resources.html">Drought Resources</a><br>
                     </p>
-                    <p class="mt-3">Copyright &copy; 2018</p>
+                    
                 </div>
             </div>
             
@@ -160,8 +186,8 @@ shortages.</p>
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script   src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript --> <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
     <script src="js/committee.js"></script>
 

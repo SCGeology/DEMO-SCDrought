@@ -8,10 +8,19 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+        <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+    
     <title>SC Drought</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
     <link href="css/main.css" rel="stylesheet">
@@ -21,8 +30,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
 
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-
 </head>
 
 <body>
@@ -30,7 +37,18 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg  fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">                 <span id="big-brand" class="d-none d-sm-inline">South Carolina Drought</span>                  <span id="small-brand" class="d-sm-none">SC Drought</span>                 <img src="logos/drought_logo.png" id="head-logo"/>             </a>
+            
+            <div>
+                <a class="navbar-brand" href="index.html">
+                <span id="big-brand" class="d-none d-sm-inline">South Carolina Drought</span>
+                <span id="small-brand" class="d-sm-none">SC Drought</span>
+                </a>
+                <a class="d-block" id="nav-sco-link" href="http://dnr.sc.gov/climate/sco">SC State Climate Office</a>
+            </div>
+            
+            <img src="logos/drought_logo.png" id="head-logo" alt="South Carolina Drought Logo"/>
+                
+                
             <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -61,20 +79,21 @@
     <!-- Page Content -->
     <div class="container">
 
-        <h1 class="mt-4">Drought Conditions in South Carolina</h1>
+        <h1 class="mt-5">Drought Conditions in South Carolina</h1>
 
         <!-- Heading Row -->
         <div class="row mt-4 mb-2" id="status-div">
             <div class="col-lg-7">
                 <div id="map"></div>
-                <div id="thumb d-print-none"></div>
+                <div id="thumb"></div>
             </div>
             
             <div id="loader" class="d-none"></div>
             
             <!-- /.col-lg-8 -->
             <div class="col-lg-5">
-                <h2 class="h4"><span id="qualifier">Current</span> Status: <span id="date"></span></h2>
+                <h2 class="h4"><span id="qualifier">Current</span> Status: <span id="date"></span> <sup><i class="fas fa-question-circle fa-sm" data-toggle="tooltip" data-placement="right" title="The current drought status was declared during the last Drought Response Committee meeting. All archived drought statuses were declared by the Drought Response Committee on the given date."></i></sup></h2>
+                <p class="border border-info my-2 p-2 mr-2 rounded">Last Drought Response Meeting: <span id="mtg-date"></span></p>
                 <div id="con-table" class="d-print-none">
                     <div class="con-row">
                         <div class="con-head" id="Normal-h">Normal<span class="graph"></span></div>
@@ -98,25 +117,23 @@
                     </div>
                 </div>
                 <p id="legend" class="d-print-none">Number of Counties in Each Category</p>
-
-                <h3 class="h4 d-print-none">Archived Drought Status</h3>
-                <div class="archive-container d-print-none">
-                    <form>
-                        <button type="button" class="btn btn-info" id="backward" title="Click to view previous archived status maps."><i class="fas fa-chevron-circle-left fa-lg"></i></button>
+                
+                <h3 class="h4 mb-0"><label for="archive-form">Archived Drought Status</label></h3>
+                <div class="archive-container">
+                    <form id="archive-form">
+                        <button type="button" value="backward" label="backward" class="btn btn-info" id="backward" title="Click to view previous archived status maps."><i class="fas fa-chevron-circle-left fa-lg"></i></button>
                         <div class="form-group" id="archive-group">
                             <select class="form-control" id="archive-select">
-                                <option value="current">Current</option>
+                                <option label="Current" value="current">Current</option>
                             </select>
                         </div>
-                        <button type="button" class="btn btn-info" id="forward" title="Click to view forward archived status maps." disabled><i class="fas fa-chevron-circle-right fa-lg"></i></button>
+                        <button type="button" value="forward" label="forward" class="btn btn-info" id="forward" title="Click to view forward archived status maps." disabled><i class="fas fa-chevron-circle-right fa-lg"></i></button>
                     </form>
                 </div>
             </div>
         </div>
         
-        <div class="d-none d-print-block"><img style="width: 250px;" src="images/print-legend.png"/></div>
-   
-        <div class="row mb-4 ml-1 text-center d-print-none">
+        <div class="row mb-2 ml-1 text-center">
             <button class="btn btn-outline-primary btn-sm mr-2 mb-2" id="expand-table">Table View 
                 <i class="fas fa-table ml-2"></i></button>
             <button class="btn btn-outline-primary btn-sm mr-2 mb-2" id="print-map">Save Map as Image
@@ -139,28 +156,54 @@
             </div>
         </div>
         
-        <div class="row my-2 d-print-none">
+        <div class="row my-3">
             <div class="col-lg-12">
                 <h4>The Top Seven</h4>
                 <h5>South Carolina uses these seven indices and indicators to determine the current drought status.</h5>
-                <p>The links below are updated to reflect current conditions.</p>
-                <ul>
-                    <li><a href="http://droughtmonitor.unl.edu/CurrentMap/StateDroughtMonitor.aspx?SC" target="_blank">United States Drought Monitor for South Carolina</a> <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="right" title="Weekly product, drought areas mapped by intensity, D1 is the least intense and D4 is the most intense."></i></li>
-                    <li><a href="images/status_update_images/CMI_status.png">Crop Moisture Index</a> <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="right" title="Weekly product, agricultural growing season short-term (up to 4 weeks) dryness or wetness."></i></li>
-                    <li><a href="images/status_update_images/PDSI_status.png">Palmer Drought Severity Index </a><i class="fas fa-question-circle" data-toggle="tooltip" data-placement="right" title="Monthly product, depicts prolonged (month, years) abnormally dry or wed conditions."></i></li>
-                    <li><a href="images/status_update_images/streaflow_status_14day_avg.png">Streamflow Levels</a> <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="right" title="Updated for the DRC meetings with the USGS streamflow data."></i></li>
-                    <li><a href="images/status_update_images/lake_levels_status.png">Lake/Reservoir Levels</a> <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="right" title="Updated for the DRC meetings with lake and reservoir levels data."></i></li>
-                    <li><a href="images/status_update_images/groundwater_status.png">Groundwater Levels</a> <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="right" title="Updated for the DRC meetings with groundwater levels data."></i></li>
-                    <li>Keetch-Byram Drought Index <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="right" title="Daily depiction of forest fire potential."></i></li>
-                </ul>
+                <p>The maps below are updated regularly to reflect current conditions. See the date on each map for the date ranges represented.</p>
             </div>
         </div>
+        <div class="row my-3 text-center thumbs">
+            <div class="col-md-3">
+                <img src="http://droughtmonitor.unl.edu/data/jpg/current/current_SC_date.jpg" class="img-fluid" alt="Thumbnail of U.S. Drought Monitor Map."><br>
+                <a href="http://droughtmonitor.unl.edu/CurrentMap/StateDroughtMonitor.aspx?SC" target="_blank">United States Drought Monitor for South Carolina</a> 
+                <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="right" title="Weekly product, drought areas mapped by intensity, D1 is the least intense and D4 is the most intense."></i>
+            </div>
+            <div class="col-md-3">
+                <img src="images/status_update_images/CMI_status.png" class="img-fluid" alt="Thumbnail of Crop Moisture Index map."><br>
+                <a href="images/status_update_images/CMI_status.png">Crop Moisture Index</a>
+                <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="right" title="Weekly product, agricultural growing season short-term (up to 4 weeks) dryness or wetness."></i>
+            </div>
+            <div class="col-md-3">
+                <img src="images/status_update_images/PDSI_status.png" class="img-fluid" alt="Thumbnail of Palmer Drought Severity Index map."><br>
+                <a href="images/status_update_images/PDSI_status.png">Palmer Drought Severity Index </a>
+                <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="right" title="Monthly product, depicts prolonged (month, years) abnormally dry or wed conditions."></i>
+            </div>
+            <div class="col-md-3">
+                <img src="images/status_update_images/streamflow_status_14day_avg.png" class="img-fluid" alt="Thumbnail of 14-day average streamflow map."><br>
+                <a href="images/status_update_images/streamflow_status_14day_avg.png">Streamflow Levels</a> 
+                <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="right" title="Updated for the DRC meetings with the USGS streamflow data."></i>
+            </div> 
+        </div>
+        <div class="row my-3 text-center thumbs">
+            <div class="col-md-4">
+                <img src="images/status_update_images/lake_levels_status.png" class="img-fluid" alt="Thumbnail of lake levels map."><br>
+                <a href="images/status_update_images/lake_levels_status.png">Lake/Reservoir Levels</a> 
+                <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="right" title="Updated for the DRC meetings with lake and reservoir levels data."></i>
+            </div>
+            <div class="col-md-4">
+                <img src="images/status_update_images/groundwater_status.png" class="img-fluid" alt="Thumbnail of groundwater status map."><br>
+                <a href="images/status_update_images/groundwater_status.png">Groundwater Levels</a> 
+                <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="right" title="Updated for the DRC meetings with groundwater levels data."></i>
+            </div>
+            <div class="col-md-4">
+                <img src="https://www.wfas.net/images/firedanger/kbdi.png" class="img-fluid" alt="Thumbnail of Keetch-Byram Drought Index map of the United States."><br>
+                <a href="https://www.wfas.net/images/firedanger/kbdi.png" target="_blank">Keetch-Byram Drought Index</a>
+                <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="right" title="Daily depiction of forest fire potential."></i>
+            </div>
+        </div>        
         
-        <div class="d-print-none">
-        <p>To learn more about drought indices and indicators, how drought is measured, and who monitors drought in South Carolina,<br>check out <a href="resources.html">South Carolina Drought 101</a>.</p>
-        </div>    
-        
-        <div class="row my-4 d-print-none">
+        <div class="row my-2">
             <div class="col-lg-12">
                 <h4>Other Drought Indicators</h4>
                 <p>There are numerous sources of information for assessing drought for different environmental factors and industries.</p>
@@ -207,11 +250,10 @@
     <!-- /.container -->
     
      <!-- Footer -->
-    <footer class="py-5 bg-dark d-print-none">
+    <footer class="py-5 bg-dark">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 order-lg-2 text-center">
-                    <a href="http://dnr.sc.gov/climate/sco"><img src="logos/dnr_white_text.png" alt="scdnr logo" class="img-fluid mb-3" id="dnr-logo"/></a>
+                <div class="col-lg-4 order-lg-2 ">                
                     <p>SCDNR State Climate Office<br>
                     Land, Water, and Conservation Division<br>
                         State Climate Office<br>
@@ -219,10 +261,15 @@
                         Columbia, SC 29202<br>
                         <a href="http://dnr.sc.gov/climate/sco">dnr.sc.gov/climate/sco</a>
                     </p>
+                    <div>
+                    <a href="http://dnr.sc.gov/climate/sco"><img src="logos/dnr-logo.gif" alt="SC Department of Natural Resources logo." class="img-fluid my-3" id="dnr-logo"/></a>
+                    </div>
+                    <p class="mt-3">Copyright &copy; 2018</p>
                 </div>
-                <div class="col-lg-4 mt-4 mt-md-0 text-center text-md-right order-lg-3">
-                    <a href="http://dnr.sc.gov/climate/sco"><img src="logos/CISAlogoTEXT.png" alt="cisa logo" id="cisa-logo"/></a>
+                
+                <div class="col-lg-4 mt-4 mt-md-0 order-lg-3">
                     <p class="isa-text pt-1">
+                    Carolina's Integrated Sciences and Assessments<br>
                     University of South Carolina<br>
                     Deptartment of Geography<br>
                     Columbia, South Carolina<br>
@@ -230,9 +277,10 @@
                     cisa@sc.edu<br>
                     <a href="http://www.cisa.sc.edu/" target="_blank">cisa.sc.edu</a>    
                     </p>
-                    <p class="isa-text pl-lg-5 text-lg-right">CISA is one of NOAA's Regional Integrated Sciences and Assessments teams.</p>
-                    <a href="https://cpo.noaa.gov/Meet-the-Divisions/Climate-and-Societal-Interactions/RISA"><img src="logos/RISA_logo_highres_crop.png" alt="risa logo" id="risa-logo"/></a>
-                    
+                     
+                    <p class="isa-text mt-3">CISA is one of NOAA's Regional Integrated Sciences and Assessments teams.</p>
+                    <a href="http://dnr.sc.gov/climate/sco"><img src="logos/CISAlogoTEXT_sm.png" alt="Carolinas Integrated Sciences and Assessments logo" class="img-fluid m-3" id="cisa-logo"/></a>
+                    <a href="https://cpo.noaa.gov/Meet-the-Divisions/Climate-and-Societal-Interactions/RISA"><img src="logos/RISA_logo_highres_sm.png" alt="Regional Integrated Sciences and Assessments logo" class="img-fluid m-3" id="risa-logo"/></a>
                 </div>
                 <div class="col-lg-4 order-lg-1 mt-3 mt-lg-0 foot-nav">
                     <p class="m-1">SCDrought.com is brought to you by:<br>
@@ -247,7 +295,7 @@
                         <a href="planning.html">Drought Planning</a><br>
                         <a href="resources.html">Drought Resources</a><br>
                     </p>
-                    <p class="mt-3">Copyright &copy; 2018</p>
+                    
                 </div>
             </div>
             
@@ -256,17 +304,19 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    
     <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin=""></script>
+    
     <script src="https://unpkg.com/esri-leaflet@2.0.4/dist/esri-leaflet.js"></script>
-
-    <script src="vendor/html2canvas.min.js"></script>
     
     <script src="js/droughtmap.js"></script>
-    <script src="js/heatgrid.js"></script>
-    
 
 </body>
 

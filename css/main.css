@@ -1,7 +1,8 @@
 body {
   padding-top: 54px;
-    color:#2b2b2b;
+  color:#264656;
 }
+
 .container a {
     text-decoration:underline;
 }
@@ -24,6 +25,7 @@ body {
     display: table;
     border-spacing: 4px;
     margin-left: -0.3rem;
+    color:black;
 }
 .con-row {
     display: table-row;
@@ -147,11 +149,11 @@ body {
 .question h3{
     background-color:#fecc5c;
     border-radius: 3px;
-    padding:0.2rem;
+    padding:0.25rem;
 }
 .area h2 {
-    background-color:#ccc;
-    padding:0.2rem;
+    background-color:#f7ebbe;
+    padding:0.25rem;
     border-radius: 3px;
 }
 
@@ -176,6 +178,11 @@ body {
     width:150px;
     padding:0.2rem 1rem;
 }
+.resources h2 {
+    background-color:#f7ebbe;
+    padding: 0.25rem;
+    border-radius:3px;
+}
 
 @media (max-width: 450px) {
   #map, #thumb {
@@ -194,14 +201,15 @@ body {
     position:fixed;
     bottom:20px;
     right:20px;
-    height:50px;
-    width:40px;
+    height:53px;
+    width:45px;
+    line-height: 1em;
     border-radius:2px;
     background-color:#aaa;
     cursor: pointer;
     box-shadow: 2px 2px 5px rgba(20,20,20,0.5);
     display: none;
-    opacity: 0.7;
+    opacity: 0.8;
     color:#222;
 }
 #backup:hover {box-shadow:0 0 0 0;}
@@ -243,7 +251,7 @@ footer a:hover{
     font-size: 0.8em;
 }
 #head-logo{
-    height:40px;
+    height:50px;
     width: auto;
     margin-left: 10px;
 }
@@ -265,7 +273,7 @@ footer a:hover{
 }
 .timeline-text p {
     margin-top: -40px;
-    padding-top: 70px;
+    padding-top: 80px;
 }
 #pdsi-legend{
     width:280px;
@@ -297,7 +305,9 @@ footer a:hover{
 #table-div {
     display: none;
 }
-
+.figure{
+    max-width: 100%
+}
 #loader {
     border: 16px solid #f3f3f3; /* Light grey */
     border-top: 16px solid #3498db; /* Blue */
@@ -314,4 +324,20 @@ footer a:hover{
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+.thumbs div{
+    height:180px;
+}
+
+.thumbs img {
+    height:65%;
+}
+.thumbs div{
+    box-shadow: 1px 1px 1px #eee;
+    padding-top:1em;
+}
+#nav-sco-link {
+    font-size:0.7em;
+    padding: 0;
+    margin-top: -0.5em;
 }
