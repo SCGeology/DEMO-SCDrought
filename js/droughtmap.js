@@ -39,7 +39,7 @@ function decode(d){
 }
 
 function getColor(d) {
-    return d == 0 ? '#ebf4c3' :
+    return d == 0 ? '#dce5b3' :
         d == 1 ? '#fecc5c' :
         d == 2 ? '#fd8d3c' :
         d == 3 ? '#f03b20' :

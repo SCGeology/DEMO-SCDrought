@@ -76,11 +76,17 @@ body {
     font-weight: bold;
 }
 
-#Normal-h, #Normal-t {background-color:#ebf4c3;}
+#Normal-h, #Normal-t {background-color:#dce5b3;}
 #Incipient-h, #Incipient-t{background-color: #fecc5c;}
 #Moderate-h, #Moderate-t{background-color:#fd8d3c;}
 #Severe-h, #Severe-t{background-color:#f03b20;}
 #Extreme-h, #Extreme-t{background-color:#bd0026;}
+
+.header-light {
+    background-color:#f7ebbe;
+    padding:0.25rem;
+    border-radius:3px
+}
 
 #thumb{
     position: absolute;
@@ -151,11 +157,6 @@ body {
     border-radius: 3px;
     padding:0.25rem;
 }
-.area h2 {
-    background-color:#f7ebbe;
-    padding:0.25rem;
-    border-radius: 3px;
-}
 
 #faq h4 {
     background-color:#f7ebbe;
@@ -178,12 +179,10 @@ body {
     width:150px;
     padding:0.2rem 1rem;
 }
-.resources h2 {
-    background-color:#f7ebbe;
-    padding: 0.25rem;
-    border-radius:3px;
-}
 
+.resources li a{
+    font-size:1.1em;
+}
 @media (max-width: 450px) {
   #map, #thumb {
     height: 250px;
