@@ -84,9 +84,10 @@
                 <p>The timeline below highlights some of the major droughts and impacts that South Carolina has experienced in the past 100 years. For those interested in detailed hydroclimate analyses related to drought in the state, visit <a href="https://cisa.sc.edu/atlas/">Carolinas Precipitation Patterns &amp; Probabilities: an Atlas of Hydroclimate Extremes</a>.</p>
                         <fieldset>
                             <legend class="sr-only">Impact Type</legend>
-                            <h3 class="h5">Find examples of major drought <b>impact types.</b></h3>
+                            <h3 class="h5">Find examples of major drought <strong>impact types.</strong></h3>
                             <div class="input-group mb-3">
-                              <select class="custom-select col-sm-3" id="impact-select">
+                              <label class="sr-only" for="impact-select">Find examples of major drought impact types.</label>
+                              <select class="custom-select col-sm-3" id="impact-select" name="impact-select">
                                 <option value ="all" selected>All Impacts</option>
                                   <option value="fire">Fire</option>
                                   <option value="ag">Agriculture</option>
@@ -95,16 +96,17 @@
                                   <option value="ind">Business &amp; Industry</option>
                               </select>
                               <div class="input-group-append">
-                                <button class="btn btn-sm btn-primary" type="button" id="impact-btn"><i class="fas fa-check"></i></button>
+                                <button class="btn btn-sm btn-primary" aria-label="Filter events by selected major impact type." type="button" id="impact-btn"><i class="fas fa-check" aria-hidden></i></button>
                               </div>
                             </div>
                         </fieldset>
 
                         <fieldset>
                             <legend class="sr-only">Decade</legend>
-                            <h3 class="h5">Zoom down to a drought event <b>by date.</b></h3>
+                            <h3 class="h5">Zoom down to a drought event <strong>by date.</strong></h3>
                             <div class="input-group mb-1">
-                                <select class="custom-select col-sm-3" id="event-select">  
+                                <label class="sr-only" for="event-select">Zoom down to a drought event by years of impact.</label>
+                                <select class="custom-select col-sm-3" id="event-select" name="event-select">  
                                   <option value ="2015-2016" selected>2015-2016</option>
                                   <option value="2010-2013">2010-2013</option>
                                   <option value="2007-2009">2007-2009</option>
@@ -116,7 +118,7 @@
                                   <option value="1910-1911">1910-1911</option>
                                 </select>
                                 <div class="input-group-append">
-                                    <button class="btn btn-sm btn-primary" type="button" id="zoom-event-btn"><i class="fas fa-check"></i></button>
+                                    <button class="btn btn-sm btn-primary" aria-label="Zoom to selected event." type="button" id="zoom-event-btn"><i class="fas fa-check" aria-hidden></i></button>
                                 </div>
                             </div>
                         </fieldset>
@@ -143,7 +145,7 @@
                             </div>
                         </div>
 
-                        <button class="btn btn-sm btn-outline-light read-more-btn collapsed" type="button" data-toggle="collapse" data-target="#read-more-1" aria-expanded="false" aria-controls="read-more-1">Read More <i class="fas ml-2 fa-angle-down"></i></button>
+                        <button class="btn btn-sm btn-outline-light read-more-btn collapsed" type="button" data-toggle="collapse" data-target="#read-more-1" aria-expanded="false" aria-controls="read-more-1">Read More <i class="fas ml-2 fa-angle-down" aria-hidden></i></button>
 
                     </div>
                 </li>
@@ -170,7 +172,7 @@
                             </div>
                         </div>
 
-                        <button class="btn btn-sm btn-outline-light read-more-btn collapsed" type="button" data-toggle="collapse" data-target=".read-more-2" aria-expanded="false" aria-controls="read-more-2 read-more-2-info">Read More <i class="fas ml-2 fa-angle-down"></i></button>
+                        <button class="btn btn-sm btn-outline-light read-more-btn collapsed" type="button" data-toggle="collapse" data-target=".read-more-2" aria-expanded="false" aria-controls="read-more-2 read-more-2-info">Read More <i class="fas ml-2 fa-angle-down" aria-hidden></i></button>
                     </div>
                 </li>
 
@@ -198,7 +200,7 @@
                             </div>
 
                         </div>
-                        <button class="btn btn-sm btn-outline-light read-more-btn" type="button" data-toggle="collapse" data-target=".read-more-3" aria-expanded="false" aria-controls="read-more-3 read-more-3-info">Read More <i class="fas fa-angle-down ml-2"></i></button>
+                        <button class="btn btn-sm btn-outline-light read-more-btn" type="button" data-toggle="collapse" data-target=".read-more-3" aria-expanded="false" aria-controls="read-more-3 read-more-3-info">Read More <i class="fas fa-angle-down ml-2" aria-hidden></i></button>
                     </div>
                 </li>
 
@@ -226,7 +228,7 @@
                             </div>
 
                         </div>
-                        <button class="btn btn-sm btn-outline-light read-more-btn" type="button" data-toggle="collapse" data-target=".read-more-4" aria-expanded="false" aria-controls="read-more-4 read-more-4-info">Read More <i class="fas fa-angle-down ml-2"></i></button>
+                        <button class="btn btn-sm btn-outline-light read-more-btn" type="button" data-toggle="collapse" data-target=".read-more-4" aria-expanded="false" aria-controls="read-more-4 read-more-4-info">Read More <i class="fas fa-angle-down ml-2" aria-hidden></i></button>
                     </div>
                 </li>
 
@@ -247,7 +249,7 @@
                                 <p class="collapse" id="read-more-5"> Tourism and recreation were affected due to the low reservoir levels, but the water supply wasn’t affected due to outside reliance on groundwater, etc. There were approximately 29 drought-related deaths due to the intense heat. </p>
                             </div>
                         </div>
-                        <button class="btn btn-sm btn-outline-light read-more-btn" type="button" data-toggle="collapse" data-target="#read-more-5" aria-expanded="false" aria-controls="read-more-5">Read More <i class="fas fa-angle-down ml-2"></i></button>
+                        <button class="btn btn-sm btn-outline-light read-more-btn" type="button" data-toggle="collapse" data-target="#read-more-5" aria-expanded="false" aria-controls="read-more-5">Read More <i class="fas fa-angle-down ml-2" aria-hidden></i></button>
                     </div>
                 </li>
 
@@ -271,7 +273,7 @@
                             </div>
 
                         </div>
-                        <button class="btn btn-sm btn-outline-light read-more-btn" type="button" data-toggle="collapse" data-target="#read-more-6" aria-expanded="false" aria-controls="read-more-6">Read More <i class="fas fa-angle-down ml-2"></i></button>
+                        <button class="btn btn-sm btn-outline-light read-more-btn" type="button" data-toggle="collapse" data-target="#read-more-6" aria-expanded="false" aria-controls="read-more-6">Read More <i class="fas fa-angle-down ml-2" aria-hidden></i></button>
                     </div>
                 </li>
 
@@ -292,7 +294,7 @@
                                 <p class="collapse" id="read-more-7"> The year 1931 is now South Carolina’s fourth driest year on record, with an average annual precipitation of 35.37 inches. In 1933, considerable replanting was necessary during the spring in many portions of the state, especially for cotton. Precipitation was the least in the southern portion of the state. </p>
                             </div>
                         </div>
-                        <button class="btn btn-sm btn-outline-light read-more-btn" type="button" data-toggle="collapse" data-target="#read-more-7" aria-expanded="false" aria-controls="read-more-7">Read More <i class="fas fa-angle-down ml-2"></i></button>
+                        <button class="btn btn-sm btn-outline-light read-more-btn" type="button" data-toggle="collapse" data-target="#read-more-7" aria-expanded="false" aria-controls="read-more-7">Read More <i class="fas fa-angle-down ml-2" aria-hidden></i></button>
                     </div>
                 </li>
 
@@ -322,7 +324,7 @@
                             </div>
 
                         </div>
-                        <button class="btn btn-sm btn-outline-light read-more-btn" type="button" data-toggle="collapse" data-target=".read-more-8" aria-expanded="false" aria-controls="read-more-8 read-more-8-info">Read More <i class="fas fa-angle-down ml-2"></i></button>
+                        <button class="btn btn-sm btn-outline-light read-more-btn" type="button" data-toggle="collapse" data-target=".read-more-8" aria-expanded="false" aria-controls="read-more-8 read-more-8-info">Read More <i class="fas fa-angle-down ml-2" aria-hidden></i></button>
                     </div>
                 </li>
 
@@ -347,7 +349,7 @@
                             </div>
 
                         </div>
-                        <button class="btn btn-sm btn-outline-light read-more-btn" type="button" data-toggle="collapse" data-target=".read-more-9" aria-expanded="false" aria-controls="read-more-9">Read More <i class="fas fa-angle-down ml-2"></i></button>
+                        <button class="btn btn-sm btn-outline-light read-more-btn" type="button" data-toggle="collapse" data-target=".read-more-9" aria-expanded="false" aria-controls="read-more-9">Read More <i class="fas fa-angle-down ml-2" aria-hidden></i></button>
                     </div>
                 </li>
                 <!-- more list items here -->
