@@ -4,13 +4,14 @@
 .read-more-btn {
     position: absolute;
     bottom:10px;
-    z-index: 50000;
+    z-index: 5;
 }
 .drought-event{
     padding-bottom:40px;
 }
 .long-img{
     max-height: 200px;
+    overflow:hidden;
 }
 .closed {
     overflow: hidden;
@@ -150,7 +151,7 @@
     }
     
     .scroll-down{
-        left:48%;
+        left:46%;
         top:10px;
     }    
 }

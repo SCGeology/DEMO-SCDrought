@@ -28,28 +28,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
 
-    <style>
-        i {
-            color: #264656;
-        }
-        
-        .galleria {
-            max-width: 600px;
-            height: 400px;
-        }
-        .galleria-theme-classic {
-            background: #264656;
-        }
-        .galleries h2 {
-            background-color:#fecc5c;
-            padding:3px;
-            border-radius: 3px;
-            max-width: 600px;
-            margin-top:20px;
-            margin-bottom:0px;
-        }
-    </style>
-
+    <link rel="stylesheet" href="css/lightbox.min.css">
+    
 </head>
 
 <body>
@@ -93,83 +73,346 @@
     </nav>
 
     <!-- Page Content -->
-    <div class="container galleries mb-5">
+    <div class="container galleries mb-5" id="top">
         <h1 class="mt-5 mb-4">SC Drought Photos</h1>
+        <ul>
+            <li><a href="#2011" >2011 Drought Image Gallery</a></li>
+            <li><a href="#2008" >2008 Drought Image Gallery</a></li>
+            <li><a href="#2007" >2007 Drought Image Gallery</a></li>
+        </ul>
+        
+    <h2 id="2011" class="my-4 text-center text-lg-left header-light">2011 Drought Pictures</h2>
 
-        <h2 class="h3">2011</h2>
-        <div class="galleria">
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Jocass2011-1.jpg" alt="Lake Jocassee (photograph courtesy of Mr. Doug Young)" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Jocass2011-2.jpg" alt="Lake Jocassee (photograph courtesy of Mr. Doug Young)" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Jocass2011-3.jpg" alt="Lake Jocassee (photograph courtesy of Mr. Doug Young)" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Jocass2011-4.jpg" alt="Lake Jocassee (photograph courtesy of Mr. Doug Young)" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Jocass2011-5.jpg" alt="Lake Jocassee (photograph courtesy of Mr. Doug Young)" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Jocass2011-6.jpg" alt="Lake Jocassee (photograph courtesy of Mr. Doug Young)" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Jocass2011-7.jpg" alt="Lake Jocassee (photograph courtesy of Mr. Doug Young)" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Jocass2011-8.jpg" alt="Lake Jocassee (photograph courtesy of Mr. Doug Young)" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Jocass2011-9.jpg" alt="Lake Jocassee (photograph courtesy of Mr. Doug Young)" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/LogCreek_US25.JPG" alt="Log Creek (photograph courtesy of Mr. Neil Bartley)" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/LogCreek_US25_2.JPG" alt="Log Creek (photograph courtesy of Mr. Neil Bartley)" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/StevensCreek2A.JPG" alt="Stevens Creek (photograph courtesy of Mr. Neil Bartley)" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Hartwell1.PNG" alt="Lake Hartwell (photograph courtesy of Mr. Doug Young)" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Hartwell2.PNG" alt="Lake Hartwell (photograph courtesy of Mr. Doug Young)" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Hartwell3.PNG" alt="Lake Hartwell (photograph courtesy of Mr. Doug Young)" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Hartwell4.PNG" alt="Lake Hartwell (photograph courtesy of Mr. Doug Young)" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Hartwell5.PNG" alt="Lake Hartwell (photograph courtesy of Mr. Doug Young)" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Hartwell6.PNG" alt="Lake Hartwell (photograph courtesy of Mr. Doug Young)" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Hartwell7.PNG" alt="Lake Hartwell (photograph courtesy of Mr. Doug Young)" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Hartwell8.PNG" alt="Lake Hartwell (photograph courtesy of Mr. Doug Young)" />
+    <div class="row text-center text-lg-left">
+
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Jocass2011-1.jpg" class="d-block mb-4 h-100" data-lightbox="2011" data-title="Lake Jocassee (photograph courtesy of Mr. Doug Young)" data-alt="Lake Jocassee (photograph courtesy of Mr. Doug Young)">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Jocass2011-1.jpg" alt="Lake Jocassee (photograph courtesy of Mr. Doug Young)">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Jocass2011-2.jpg" class="d-block mb-4 h-100" data-lightbox="2011" data-title="Lake Jocassee (photograph courtesy of Mr. Doug Young)" data-alt="Lake Jocassee (photograph courtesy of Mr. Doug Young)">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Jocass2011-2.jpg" alt="Lake Jocassee (photograph courtesy of Mr. Doug Young)">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Jocass2011-3.jpg" class="d-block mb-4 h-100" data-lightbox="2011" data-title="Lake Jocassee (photograph courtesy of Mr. Doug Young)" data-alt="Lake Jocassee (photograph courtesy of Mr. Doug Young)">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Jocass2011-3.jpg" alt="Lake Jocassee (photograph courtesy of Mr. Doug Young)" >
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Jocass2011-4.jpg" class="d-block mb-4 h-100" data-lightbox="2011" data-title="Lake Jocassee (photograph courtesy of Mr. Doug Young)" data-alt="Lake Jocassee (photograph courtesy of Mr. Doug Young)">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Jocass2011-4.jpg" alt="Lake Jocassee (photograph courtesy of Mr. Doug Young)">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Jocass2011-4.jpg" class="d-block mb-4 h-100" data-lightbox="2011" data-title="Lake Jocassee (photograph courtesy of Mr. Doug Young)" data-alt="Lake Jocassee (photograph courtesy of Mr. Doug Young)">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Jocass2011-5.jpg" alt="Lake Jocassee (photograph courtesy of Mr. Doug Young)">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Jocass2011-6.jpg" class="d-block mb-4 h-100" data-lightbox="2011" data-title="Lake Jocassee (photograph courtesy of Mr. Doug Young)" data-alt="Lake Jocassee (photograph courtesy of Mr. Doug Young)">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Jocass2011-6.jpg" alt="Lake Jocassee (photograph courtesy of Mr. Doug Young)">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Jocass2011-7.jpg" class="d-block mb-4 h-100" data-lightbox="2011" data-title="Lake Jocassee (photograph courtesy of Mr. Doug Young)" data-alt="Lake Jocassee (photograph courtesy of Mr. Doug Young)">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Jocass2011-7.jpg" alt="Lake Jocassee (photograph courtesy of Mr. Doug Young)">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Jocass2011-8.jpg" class="d-block mb-4 h-100" data-lightbox="2011" data-title="Lake Jocassee (photograph courtesy of Mr. Doug Young)" data-alt="Lake Jocassee (photograph courtesy of Mr. Doug Young)">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Jocass2011-8.jpg" alt="Lake Jocassee (photograph courtesy of Mr. Doug Young)">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Jocass2011-8.jpg" class="d-block mb-4 h-100" data-lightbox="2011" data-title="Lake Jocassee (photograph courtesy of Mr. Doug Young)" data-alt="Lake Jocassee (photograph courtesy of Mr. Doug Young)">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Jocass2011-9.jpg" alt="Lake Jocassee (photograph courtesy of Mr. Doug Young)">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/LogCreek_US25.JPG" class="d-block mb-4 h-100" data-lightbox="2011" data-title="Log Creek (photograph courtesy of Mr. Neil Bartley)" data-alt="Log Creek (photograph courtesy of Mr. Neil Bartley)">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/LogCreek_US25.JPG" alt="Log Creek (photograph courtesy of Mr. Neil Bartley)">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/LogCreek_US25_2.JPG" class="d-block mb-4 h-100" data-lightbox="2011" data-title="Log Creek (photograph courtesy of Mr. Neil Bartley)" data-alt="Log Creek (photograph courtesy of Mr. Neil Bartley)">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/LogCreek_US25_2.JPG" alt="Log Creek (photograph courtesy of Mr. Neil Bartley)">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/StevensCreek2A.JPG" class="d-block mb-4 h-100" data-lightbox="2011" data-title="Stevens Creek (photograph courtesy of Mr. Neil Bartley)" data-alt="Stevens Creek (photograph courtesy of Mr. Neil Bartley)">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/StevensCreek2A.JPG" alt="Stevens Creek (photograph courtesy of Mr. Neil Bartley)">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Hartwell1.PNG" class="d-block mb-4 h-100" data-lightbox="2011" data-title="Lake Hartwell (photograph courtesy of Mr. Doug Young)" data-alt="Lake Hartwell (photograph courtesy of Mr. Doug Young)">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Hartwell1.PNG" alt="Lake Hartwell (photograph courtesy of Mr. Doug Young)">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Hartwell2.PNG" class="d-block mb-4 h-100" data-lightbox="2011" data-title="Lake Hartwell (photograph courtesy of Mr. Doug Young)" data-alt="Lake Hartwell (photograph courtesy of Mr. Doug Young)">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Hartwell2.PNG" alt="Lake Hartwell (photograph courtesy of Mr. Doug Young)">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Hartwell3.PNG" class="d-block mb-4 h-100" data-lightbox="2011" data-title="Lake Hartwell (photograph courtesy of Mr. Doug Young)" data-alt="Lake Hartwell (photograph courtesy of Mr. Doug Young)">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Hartwell3.PNG" alt="Lake Hartwell (photograph courtesy of Mr. Doug Young)">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Hartwell4.PNG" class="d-block mb-4 h-100" data-lightbox="2011" data-title="Lake Hartwell (photograph courtesy of Mr. Doug Young)" data-alt="Lake Hartwell (photograph courtesy of Mr. Doug Young)">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Hartwell4.PNG" alt="Lake Hartwell (photograph courtesy of Mr. Doug Young)">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Hartwell5.PNG" class="d-block mb-4 h-100" data-lightbox="2011" data-title="Lake Hartwell (photograph courtesy of Mr. Doug Young)" data-alt="Lake Hartwell (photograph courtesy of Mr. Doug Young)">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Hartwell5.PNG" alt="Lake Hartwell (photograph courtesy of Mr. Doug Young)">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Hartwell6.PNG" class="d-block mb-4 h-100" data-lightbox="2011" data-title="Lake Hartwell (photograph courtesy of Mr. Doug Young)" data-alt="Lake Hartwell (photograph courtesy of Mr. Doug Young)">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Hartwell6.PNG" alt="Lake Hartwell (photograph courtesy of Mr. Doug Young)">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Hartwell7.PNG" class="d-block mb-4 h-100" data-lightbox="2011" data-title="Lake Hartwell (photograph courtesy of Mr. Doug Young)" data-alt="Lake Hartwell (photograph courtesy of Mr. Doug Young)">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Hartwell7.PNG" alt="Lake Hartwell (photograph courtesy of Mr. Doug Young)">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Hartwell8.PNG" class="d-block mb-4 h-100" data-lightbox="2011" data-title="Lake Hartwell (photograph courtesy of Mr. Doug Young)" data-alt="Lake Hartwell (photograph courtesy of Mr. Doug Young)">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Hartwell8.PNG" alt="Lake Hartwell (photograph courtesy of Mr. Doug Young)">
+            </a>
+        </div>
+    </div>   
+        
+    <h2 id="2008" class="my-4 text-center text-lg-left header-light">2008 Drought Pictures</h2>
+
+    <div class="row text-center text-lg-left">
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/ClemsonB_6.jpg" class="d-block mb-4 h-100" data-lightbox="2008" data-title="Memorial Bridge" data-alt="Memorial Bridge">
+                <img class="img-fluid img-thumbnail"  src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/ClemsonB_6.jpg" alt="Memorial Bridge" >
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/ClemsonB_5.jpg" class="d-block mb-4 h-100" data-lightbox="2008" data-title="Memorial Bridge" data-alt="Memorial Bridge">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/ClemsonB_5.jpg" alt="Memorial Bridge">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/ClemsonB_4.jpg" class="d-block mb-4 h-100" data-lightbox="2008" data-title="Memorial Bridge" data-alt="Memorial Bridge">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/ClemsonB_4.jpg" alt="Memorial Bridge">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/ClemsonB_3.jpg" class="d-block mb-4 h-100" data-lightbox="2008" data-title="Memorial Bridge" data-alt="Memorial Bridge">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/ClemsonB_3.jpg" alt="Memorial Bridge">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/ClemsonB_1.jpg" class="d-block mb-4 h-100" data-lightbox="2008" data-title="Memorial Bridge" data-alt="Memorial Bridge">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/ClemsonB_1.jpg" alt="Memorial Bridge">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Tugalo_2.jpg" class="d-block mb-4 h-100" data-lightbox="2008" data-title="Tugalo River" data-alt="Tugalo River">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Tugalo_2.jpg" alt="Tugalo River">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Tugalo_1.jpg" class="d-block mb-4 h-100" data-lightbox="2008" data-title="Tugalo River" data-alt="Tugalo River">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Tugalo_1.jpg" alt="Tugalo River">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/lakeMarion_d_8_2008.jpg" class="d-block mb-4 h-100" data-lightbox="2008" data-title="Lake Marion" data-alt="Lake Marion">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/lakeMarion_d_8_2008.jpg" alt="Lake Marion">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Eutaw_Springs.jpg" class="d-block mb-4 h-100" data-lightbox="2008" data-title="Eutaw Springs" data-alt="Eutaw Springs">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Eutaw_Springs.jpg" alt="Eutaw Springs">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide27.jpg" class="d-block mb-4 h-100" data-lightbox="2008" data-title="Lake Hartwell" data-alt="Lake Hartwell">
+                <img class="img-fluid img-thumbnail"  src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide27.jpg" alt="Lake Hartwell">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide26.jpg" class="d-block mb-4 h-100" data-lightbox="2008" data-title="Lake Hartwell" data-alt="Lake Hartwell">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide26.jpg" alt="Lake Hartwell" >
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/lakeMarion_c_8_2008.jpg" class="d-block mb-4 h-100" data-lightbox="2008" data-title="Lake Marion, August 2008" data-alt="Lake Marion, August 2008">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/lakeMarion_c_8_2008.jpg" alt="Lake Marion, August 2008">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/DeepHoleSwamp_b_8_2008.jpg" class="d-block mb-4 h-100" data-lightbox="2008" data-title="Deep Hole Swamp" data-alt="Deep Hole Swamp">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/DeepHoleSwamp_b_8_2008.jpg" alt="Deep Hole Swamp">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/DeepHoleSwamp_a_8_2008.jpg" class="d-block mb-4 h-100" data-lightbox="2008" data-title="Deep Hole Swamp" data-alt="Deep Hole Swamp">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/DeepHoleSwamp_a_8_2008.jpg" alt="Deep Hole Swamp">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/lakeMarion_b_8_2008.jpg" class="d-block mb-4 h-100" data-lightbox="2008" data-title="Lake Marion, August  2008" data-alt="Lake Marion, August 2008">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/lakeMarion_b_8_2008.jpg" alt="Lake Marion, August 2008">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/lakeMarion_a_8_2008.jpg" class="d-block mb-4 h-100" data-lightbox="2008" data-title="Lake Marion, August 2008" data-alt="Lake Marion, August 2008">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/lakeMarion_a_8_2008.jpg" alt="Lake Marion, August 2008" >
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Lake_Hartwell_Aug_2008ts.jpg" class="d-block mb-4 h-100" data-lightbox="2008" data-title="Lake Hartwell, 2008" data-alt="Lake Hartwell, 2008">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Lake_Hartwell_Aug_2008ts.jpg" alt="Lake Hartwell, 2008">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide25.jpg" class="d-block mb-4 h-100" data-lightbox="2008" data-title="Lake Hartwell, 2008" data-alt="Lake Hartwell, 2008">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide25.jpg" alt="Lake Hartwell, 2008" >
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide24.jpg" class="d-block mb-4 h-100" data-lightbox="2008" data-title="Lake Hartwell, 2008" data-alt="Lake Hartwell, 2008">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide24.jpg" alt="Lake Hartwell, 2008">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide23.jpg" class="d-block mb-4 h-100" data-lightbox="2008" data-title="Lake Hartwell, 2008" data-alt="Lake Hartwell, 2008">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide23.jpg" alt="Lake Hartwell, 2008">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/TribofClarkFork-1_t.jpg" class="d-block mb-4 h-100" data-lightbox="2008" data-title="Clark Fork Tributary, 2008" data-alt="Clark Fork Tributary, 2008">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/TribofClarkFork-1_t.jpg" alt="Clark Fork Tributary, 2008">
+            </a>
+        </div>
+    </div>    
+        
+    <h2 id="2007" class="my-4 text-center text-lg-left header-light">2007 Drought Pictures</h2>
+        
+    <div class="row text-center text-lg-left">
+        
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide2.JPG" class="d-block mb-4 h-100" data-lightbox="2007" data-title="Lake Hartwell" data-alt="Lake Hartwell">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide2.JPG" alt="Lake Hartwell">
+            </a>
+        </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide3.JPG" class="d-block mb-4 h-100" data-lightbox="2007" data-title="Lake Keowee" data-alt="Lake Keowee">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide3.JPG" alt="Lake Keowee">
+            </a>
+        </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide4.JPG" class="d-block mb-4 h-100" data-lightbox="2007" data-title="Lake Bowen" data-alt="Lake Bowen">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide4.JPG" alt="Lake Bowen">
+            </a>
+        </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide5.JPG" class="d-block mb-4 h-100" data-lightbox="2007" data-title="Lake Jocassee" data-alt="Lake Jocassee">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide5.JPG" alt="Lake Jocassee">
+            </a>
+        </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide6.JPG" class="d-block mb-4 h-100" data-lightbox="2007" data-title="Lake Jocassee" data-alt="Lake Jocassee">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide6.JPG" alt="Lake Jocassee">
+            </a>
+        </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide7.JPG" class="d-block mb-4 h-100" data-lightbox="2007" data-title="Lake Jocassee" data-alt="Lake Jocassee">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide7.JPG" alt="Lake Jocassee">
+            </a>
+        </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide8.JPG" class="d-block mb-4 h-100" data-lightbox="2007" data-title="Lake Marion" data-alt="Lake Marion">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide8.JPG" alt="Lake Marion">
+            </a>
+        </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide9.JPG" class="d-block mb-4 h-100" data-lightbox="2007" data-title="Lake Marion" data-alt="Lake Marion">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide9.JPG" alt="Lake Marion">
+            </a>
+        </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide10.JPG" class="d-block mb-4 h-100" data-lightbox="2007" data-title="Lake Marion" data-alt="Lake Marion">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide10.JPG" alt="Lake Marion">
+            </a>
+        </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide11.JPG" class="d-block mb-4 h-100" data-lightbox="2007" data-title="Lake Marion" data-alt="Lake Marion">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide11.JPG" alt="Lake Marion">
+            </a>
+        </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide12.JPG" class="d-block mb-4 h-100" data-lightbox="2007" data-title="Lake Moultrie" data-alt="Lake Moultrie">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide12.JPG" alt="Lake Moultrie">
+            </a>
+        </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide13.JPG" class="d-block mb-4 h-100" data-lightbox="2007" data-title="Jones Flat" data-alt="Jones Flat">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide13.JPG" alt="Jones Flat">
+            </a>
+        </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide14.JPG" class="d-block mb-4 h-100" data-lightbox="2007" data-title="Packs Landing" data-alt="Packs Landing">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide14.JPG" alt="Packs Landing">
+            </a>
+        </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide15.JPG" class="d-block mb-4 h-100" data-lightbox="2007" data-title="Cane Branch and Persanti Flats" data-alt="Cane Branch and Persanti Flats">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide15.JPG" alt="Cane Branch and Persanti Flats">
+            </a>
+        </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide16.JPG" class="d-block mb-4 h-100" data-lightbox="2007" data-title="Lake Marion" data-alt="Lake Marion">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide16.JPG" alt="Lake Marion">
+            </a>
+        </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide17.JPG" class="d-block mb-4 h-100" data-lightbox="2007" data-title="Lake Marion Sparkleberry Cut" data-alt="Lake Marion Sparkleberry Cut">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide17.JPG" alt="Lake Marion Sparkleberry Cut">
+            </a>
+        </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide18.JPG" class="d-block mb-4 h-100" data-lightbox="2007" data-title="Dry Pond in Dorchester County" data-alt="Dry Pond in Dorchester County">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide18.JPG" alt="Dry Pond in Dorchester County">
+            </a>
+        </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide19.JPG" class="d-block mb-4 h-100" data-lightbox="2007" data-title="Rocks Pond, Lake Marion" data-alt="Rocks Pond, Lake Marion">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide19.JPG" alt="Rocks Pond, Lake Marion">
+            </a>
+        </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide20.JPG" class="d-block mb-4 h-100" data-lightbox="2007" data-title="Lake Marion" data-alt="Lake Marion">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide20.JPG" alt="Lake Marion">
+            </a>
+        </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide21.JPG" class="d-block mb-4 h-100" data-lightbox="2007" data-title="Lake Marion" data-alt="Lake Marion">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide21.JPG" alt="Lake Marion">
+            </a>
+        </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide22.JPG" class="d-block mb-4 h-100" data-lightbox="2007" data-title="Rocks Pond Marina, Lake Marion" data-alt="Rocks Pond Marina, Lake Marion">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide22.JPG" alt="Rocks Pond Marina, Lake Marion">
+            </a>
+        </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Ballards4.JPG" class="d-block mb-4 h-100" data-lightbox="2007" data-title="Ballards, Lake Marion" data-alt="Ballards, Lake Marion">
+                <img class="img-fluid img-thumbnail" src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Ballards4.JPG" alt="Ballards, Lake Marion">
+            </a>
         </div>
 
-        <h2 class="h3">2008</h2>
-        <div class="galleria">
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/TribofClarkFork-1_t.jpg" alt="Clark Fork Tributary, 2008" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide23.jpg" alt="Lake Hartwell, 2008" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide24.jpg" alt="Lake Hartwell, 2008" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide25.jpg" alt="Lake Hartwell, 2008" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Lake_Hartwell_Aug_2008ts.jpg" alt="Lake Hartwell, 2008" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/lakeMarion_a_8_2008.jpg" alt="Lake Marion, August  2008" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/lakeMarion_b_8_2008.jpg" alt="Lake Marion, August  2008" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/DeepHoleSwamp_a_8_2008.jpg" alt="Deep Hole Swamp" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/DeepHoleSwamp_b_8_2008.jpg" alt="Deep Hole Swamp" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/lakeMarion_c_8_2008.jpg" alt="Lake Marion, August  2008" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide26.jpg" alt="Lake Hartwell" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide27.jpg" alt="Lake Hartwell" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Eutaw_Springs.jpg" alt="Eutaw Springs" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/lakeMarion_d_8_2008.jpg" alt="Lake Marion" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Tugalo_1.jpg" alt="Tugalo River" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Tugalo_2.jpg" alt="Tugalo River" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/ClemsonB_1.jpg" alt="Memorial Bridge" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/ClemsonB_3.jpg" alt="Memorial Bridge" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/ClemsonB_4.jpg" alt="Memorial Bridge" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/ClemsonB_5.jpg" alt="Memorial Bridge" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/ClemsonB_6.jpg" alt="Memorial Bridge" />
-        </div>
-
-        <h2 class="h3">2007</h2>
-        <div class="galleria">
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide2.JPG" alt="Lake Hartwell" title="test" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide3.JPG" alt="Lake Keowee" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide4.JPG" alt="Lake Bowen" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide5.JPG" alt="Lake Jocassee" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide6.JPG" alt="Lake Jocassee" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide7.JPG" alt="Lake Jocassee" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide8.JPG" alt="Lake Marion" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide9.JPG" alt="Lake Marion" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide16.JPG" alt="Lake Marion" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide13.JPG" alt="Jones Flat" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide14.JPG" alt="Packs Landing" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide17.JPG" alt="Lake Marion Sparkleberry Cut" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide18.JPG" alt="Dry Pond in Dorchester County" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide19.JPG" alt="Rocks Pond, Lake Marion" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide10.JPG" alt="Lake Marion" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide11.JPG" alt="Lake Marion" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide15.JPG" alt="Cane Branch and Persanti Flats" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide12.JPG" alt="Lake Moultrie" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide20.JPG" alt="Lake Marion" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide21.JPG" alt="Lake Marion" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Slide22.JPG" alt="Rocks Pond Marina, Lake Marion" />
-            <img src="http://www.dnr.sc.gov/climate/sco/Drought/pictures/Ballards4.JPG" alt="Ballards, Lake Marion" />
-        </div>
+    </div>  
 
     </div>
 
@@ -237,6 +480,13 @@
 
         </div>
         <!-- /.container -->
+    <a href="#top">
+        <div id="backup">
+            Back to Top
+            <span class="sr-only">Go back to top of page.</span>
+        </div>
+    </a>  
+        
     </footer>
 
     <!-- Bootstrap core JavaScript -->
@@ -244,22 +494,33 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/galleria.min.js"></script>
-
+    <script src="js/lightbox.min.js"></script>
+    
     <script>
-        (function() {
-            Galleria.loadTheme('https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/themes/classic/galleria.classic.min.js');
+    $(document).ready(function(){
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $('#backup:hidden').stop(true, true).fadeIn();
+            } else {
+                $('#backup').stop(true, true).fadeOut();
+            }
+        });
 
-            Galleria.configure({
-                transition: 'fade',
-                lightbox: true,
-                responsive:true
+        $('a[href^="#"]').on('click',function (e) {
+            e.preventDefault();
+
+            var target = this.hash;
+            var $target = $(target);
+
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top
+            }, 900, 'swing', function () {
+                window.location.hash = target;
             });
-
-            Galleria.run('.galleria');
-
-        }());
+        });
+    });
     </script>
+    
 
 </body>
 
